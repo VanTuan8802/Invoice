@@ -17,6 +17,17 @@ enum AnalyticsScreen: String {
 
 
     // MARK: Documents (invoice & estimate)
+    case invoiceList = "invoice_list"
+    case estimateList = "estimate_list"
+    case documentSearch = "document_search"
+    case documentFilter = "document_filter"
+    case documentEdit = "document_edit"
+    case documentPreview = "document_preview"
+    case documentHistory = "document_history"
+    case documentShare = "document_share"
+    case documentMarkAsPaid = "document_mark_as_paid"
+    case documentSignature = "document_signature"
+    case documentPhoto = "document_photo"
 
 
     // MARK: Document fields
