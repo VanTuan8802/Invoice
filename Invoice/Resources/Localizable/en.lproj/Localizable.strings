@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "Invoices";
+"onboarding_splash_ads_notice" = "This action can contain ads";
+"onboarding_intro_title_1" = "Create Invoices";
+"onboarding_intro_message_1" = "Create invoices easily with our tool; customize, send, and track payments seamlessly.";
+"onboarding_intro_title_2" = "Create Estimates";
+"onboarding_intro_message_2" = "Create accurate estimates quickly; customize details, share with clients, and track approvals effortlessly.";
+"onboarding_intro_title_3" = "Diverse Templates";
+"onboarding_intro_message_3" = "Access various templates; customize, use for different needs, and streamline your workflow efficiently.";
+"onboarding_intro_title_4" = "Security and Protection";
+"onboarding_intro_message_4" = "E-invoices can be secured with digital signatures or QR codes, ensuring data integrity and preventing fraud.";
+"onboarding_intro_start" = "Start";
+"onboarding_welcome_title" = "Welcome back";
+"onboarding_business_title" = "Business Details";
+"onboarding_business_subtitle" = "Information collected will be used for your invoices, and can be edited later.";
+"onboarding_business_name" = "Business Name";
+"onboarding_business_address" = "Address";
+"onboarding_business_phone" = "Phone Number";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "Upload your business logo";
+"onboarding_logo_subtitle" = "Make your invoice look professional and branded.";
+"onboarding_logo_upload" = "Upload Photo";
+"onboarding_logo_change" = "Change Photo";
+"onboarding_template_title" = "Select a template";
+"onboarding_template_subtitle" = "Choose from professionally crafted templates that align with your brand.";
+"onboarding_all_set_title" = "You’re All Set!";
+"onboarding_all_set_message" = "Welcome to the world of lightning-fast invoicing";
+"onboarding_all_set_create_invoice" = "Create New Invoice";
+"premium_badge" = "PREMIUM";
+"premium_feature_remove_ads" = "Remove Ads";
+"premium_feature_unlock_all" = "Unlock all premium features";
+"premium_plan_trial" = "%d days free trial";
+"premium_plan_weekly" = "%@ / Weekly";
+"premium_plan_lifetime" = "%@ / Lifetime";
+"premium_most_popular" = "MOST POPULAR";
+"premium_secured" = "Secured by Apple Store. Cancel anytime";
+"premium_terms" = "Term of Use";
+"premium_restore" = "Restore Purchase";
+"premium_restore_empty" = "No previous purchases were found.";
+"premium_success_title" = "Successful";
+"premium_success_message" = "Great, your purchase was successful!";
 
 
 /* ===== Documents (invoice & estimate) ===== */

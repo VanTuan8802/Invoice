@@ -35,39 +35,41 @@ struct SplashView: View {
     @State private var step: SplashStep = .idle
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 0) {
             Spacer()
 
-            Image(systemName: "square.stack.3d.up.fill")
-                .font(.system(size: 72, weight: .bold))
-                .foregroundStyle(Color.accentColor)
-                .scaleEffect(appeared ? 1 : 0.7)
-                .opacity(appeared ? 1 : 0)
-
-            Text("Invoice")
-                .font(.largeTitle.bold())
-                .opacity(appeared ? 1 : 0)
-
-            Spacer()
-
+            // Logo + app name, slightly above the vertical center (design: -12pt).
             VStack(spacing: 10) {
-                ProgressView(value: step.progress)
-                    .progressViewStyle(.linear)
-                    .tint(.accentColor)
-                    .frame(width: 200)
-                    .animation(.easeInOut(duration: 0.3), value: step)
+                // Illus/Logo is 124pt with soft padding around a 100pt tile.
+                Image(R.image.illus_logo)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 124, height: 124)
+                    .frame(width: 100, height: 100)
+                    .scaleEffect(appeared ? 1 : 0.7)
 
-                Text("\(R.stringLocalizable.loading()) \(Int(step.progress * 100))%")
-                    .font(.footnote.monospacedDigit())
-                    .foregroundStyle(.secondary)
-                    .contentTransition(.numericText())
-                    .animation(.easeInOut(duration: 0.3), value: step)
+                Text(R.stringLocalizable.onboarding_app_name())
+                    .font(.title.bold())
+                    .foregroundStyle(Color(R.color.color111118))
             }
-            .padding(.bottom, 60)
+            .opacity(appeared ? 1 : 0)
+            .padding(.bottom, 24)
+
+            Spacer()
+
+            VStack(spacing: 16) {
+                progressBar
+                Text(R.stringLocalizable.onboarding_splash_ads_notice())
+                    .font(.subheadline)
+                    .foregroundStyle(Color(R.color.color111118))
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.horizontal, 32)
+            .padding(.bottom, 4)
             .opacity(appeared ? 1 : 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
+        .background(Color(R.color.colorF4F4F6).ignoresSafeArea())
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
                 appeared = true
@@ -77,9 +79,31 @@ struct SplashView: View {
             // Guard so the init sequence runs once even if `.task` re-fires.
             guard !didStart else { return }
             didStart = true
+            #if DEBUG
+            // `-uiPreviewPhase splash`: static screen for design checks — no
+            // ads / consent sequence, no auto-advance.
+            if ProcessInfo.processInfo.arguments.contains("-uiPreviewPhase") {
+                step = .initializingAds
+                return
+            }
+            #endif
             await configAds()
         }
         .trackScreen(.splash)
+    }
+
+    /// 258×5 lavender track with an ink fill that advances with `step`.
+    private var progressBar: some View {
+        ZStack(alignment: .leading) {
+            Capsule()
+                .fill(Color(R.color.colorCFC3FF))
+            Capsule()
+                .fill(Color(R.color.color111118))
+                .frame(width: 258 * step.progress)
+                .buttonElevation()
+        }
+        .frame(width: 258, height: 5)
+        .animation(.easeInOut(duration: 0.3), value: step)
     }
 }
 

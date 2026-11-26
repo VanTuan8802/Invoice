@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Languages the app ships translations for (one `.lproj` each).
 enum AppLanguage: String, CaseIterable, Identifiable {
     case english = "en"
     case vietnamese = "vi"
@@ -17,7 +18,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    /// Name shown in the user's own language.
+    /// Name shown in the user's own language (endonym — not translated).
     var displayName: String {
         switch self {
         case .english:    return "English"
@@ -29,7 +30,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         }
     }
 
-    /// Flag emoji used as a lightweight icon.
+    /// Flag emoji used as a lightweight inline icon (e.g. Settings rows).
     var flag: String {
         switch self {
         case .english:    return "🇬🇧"
@@ -38,6 +39,18 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .french:     return "🇫🇷"
         case .german:     return "🇩🇪"
         case .japanese:   return "🇯🇵"
+        }
+    }
+
+    /// 32×24 flag artwork from the design (language picker rows).
+    var flagImage: RswiftResources.ImageResource {
+        switch self {
+        case .english:    return R.image.ic_onboarding_flag_en
+        case .vietnamese: return R.image.ic_onboarding_flag_vi
+        case .spanish:    return R.image.ic_onboarding_flag_es
+        case .french:     return R.image.ic_onboarding_flag_fr
+        case .german:     return R.image.ic_onboarding_flag_de
+        case .japanese:   return R.image.ic_onboarding_flag_ja
         }
     }
 

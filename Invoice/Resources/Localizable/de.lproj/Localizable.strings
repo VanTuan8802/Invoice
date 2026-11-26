@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "Rechnungen";
+"onboarding_splash_ads_notice" = "Diese Aktion kann Werbung enthalten";
+"onboarding_intro_title_1" = "Rechnungen erstellen";
+"onboarding_intro_message_1" = "Erstellen Sie Rechnungen ganz einfach mit unserem Tool – anpassen, senden und Zahlungen nahtlos verfolgen.";
+"onboarding_intro_title_2" = "Angebote erstellen";
+"onboarding_intro_message_2" = "Erstellen Sie schnell genaue Angebote – Details anpassen, mit Kunden teilen und Freigaben mühelos verfolgen.";
+"onboarding_intro_title_3" = "Vielfältige Vorlagen";
+"onboarding_intro_message_3" = "Greifen Sie auf zahlreiche Vorlagen zu – anpassen, für verschiedene Zwecke nutzen und Ihren Arbeitsablauf effizient gestalten.";
+"onboarding_intro_title_4" = "Sicherheit und Schutz";
+"onboarding_intro_message_4" = "E-Rechnungen lassen sich mit digitalen Signaturen oder QR-Codes absichern – für Datenintegrität und Schutz vor Betrug.";
+"onboarding_intro_start" = "Starten";
+"onboarding_welcome_title" = "Willkommen zurück";
+"onboarding_business_title" = "Unternehmensdaten";
+"onboarding_business_subtitle" = "Die erfassten Angaben werden für Ihre Rechnungen verwendet und können später bearbeitet werden.";
+"onboarding_business_name" = "Firmenname";
+"onboarding_business_address" = "Adresse";
+"onboarding_business_phone" = "Telefonnummer";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "Firmenlogo hochladen";
+"onboarding_logo_subtitle" = "Verleihen Sie Ihrer Rechnung ein professionelles Markenbild.";
+"onboarding_logo_upload" = "Foto hochladen";
+"onboarding_logo_change" = "Foto ändern";
+"onboarding_template_title" = "Vorlage auswählen";
+"onboarding_template_subtitle" = "Wählen Sie aus professionell gestalteten Vorlagen, die zu Ihrer Marke passen.";
+"onboarding_all_set_title" = "Alles bereit!";
+"onboarding_all_set_message" = "Willkommen in der Welt der blitzschnellen Rechnungsstellung";
+"onboarding_all_set_create_invoice" = "Neue Rechnung erstellen";
+"premium_badge" = "PREMIUM";
+"premium_feature_remove_ads" = "Keine Werbung";
+"premium_feature_unlock_all" = "Alle Premium-Funktionen freischalten";
+"premium_plan_trial" = "%d Tage kostenlos testen";
+"premium_plan_weekly" = "%@ / Woche";
+"premium_plan_lifetime" = "%@ / Lebenslang";
+"premium_most_popular" = "AM BELIEBTESTEN";
+"premium_secured" = "Gesichert durch den Apple Store. Jederzeit kündbar";
+"premium_terms" = "Nutzungsbedingungen";
+"premium_restore" = "Kauf wiederherstellen";
+"premium_restore_empty" = "Es wurden keine früheren Käufe gefunden.";
+"premium_success_title" = "Erfolgreich";
+"premium_success_message" = "Super, Ihr Kauf war erfolgreich!";
 
 
 /* ===== Documents (invoice & estimate) ===== */

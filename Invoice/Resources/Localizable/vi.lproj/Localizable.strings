@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "Hóa Đơn";
+"onboarding_splash_ads_notice" = "Thao tác này có thể chứa quảng cáo";
+"onboarding_intro_title_1" = "Tạo hóa đơn";
+"onboarding_intro_message_1" = "Tạo hóa đơn dễ dàng với công cụ của chúng tôi; tùy chỉnh, gửi và theo dõi thanh toán liền mạch.";
+"onboarding_intro_title_2" = "Tạo báo giá";
+"onboarding_intro_message_2" = "Tạo báo giá chính xác nhanh chóng; tùy chỉnh chi tiết, chia sẻ với khách hàng và theo dõi phê duyệt dễ dàng.";
+"onboarding_intro_title_3" = "Mẫu đa dạng";
+"onboarding_intro_message_3" = "Truy cập nhiều mẫu khác nhau; tùy chỉnh, dùng cho nhiều nhu cầu và tối ưu quy trình làm việc hiệu quả.";
+"onboarding_intro_title_4" = "Bảo mật và an toàn";
+"onboarding_intro_message_4" = "Hóa đơn điện tử có thể được bảo vệ bằng chữ ký số hoặc mã QR, đảm bảo toàn vẹn dữ liệu và ngăn chặn gian lận.";
+"onboarding_intro_start" = "Bắt đầu";
+"onboarding_welcome_title" = "Chào mừng trở lại";
+"onboarding_business_title" = "Thông tin doanh nghiệp";
+"onboarding_business_subtitle" = "Thông tin thu thập sẽ được dùng cho hóa đơn của bạn và có thể chỉnh sửa sau.";
+"onboarding_business_name" = "Tên doanh nghiệp";
+"onboarding_business_address" = "Địa chỉ";
+"onboarding_business_phone" = "Số điện thoại";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "Tải lên logo doanh nghiệp";
+"onboarding_logo_subtitle" = "Giúp hóa đơn của bạn chuyên nghiệp và mang đậm thương hiệu.";
+"onboarding_logo_upload" = "Tải ảnh lên";
+"onboarding_logo_change" = "Đổi ảnh";
+"onboarding_template_title" = "Chọn mẫu";
+"onboarding_template_subtitle" = "Chọn từ các mẫu được thiết kế chuyên nghiệp phù hợp với thương hiệu của bạn.";
+"onboarding_all_set_title" = "Mọi thứ đã sẵn sàng!";
+"onboarding_all_set_message" = "Chào mừng đến với thế giới lập hóa đơn siêu tốc";
+"onboarding_all_set_create_invoice" = "Tạo hóa đơn mới";
+"premium_badge" = "PREMIUM";
+"premium_feature_remove_ads" = "Xóa quảng cáo";
+"premium_feature_unlock_all" = "Mở khóa mọi tính năng cao cấp";
+"premium_plan_trial" = "Dùng thử miễn phí %d ngày";
+"premium_plan_weekly" = "%@ / Tuần";
+"premium_plan_lifetime" = "%@ / Trọn đời";
+"premium_most_popular" = "PHỔ BIẾN NHẤT";
+"premium_secured" = "Bảo mật bởi Apple Store. Hủy bất cứ lúc nào";
+"premium_terms" = "Điều khoản sử dụng";
+"premium_restore" = "Khôi phục giao dịch";
+"premium_restore_empty" = "Không tìm thấy giao dịch nào trước đó.";
+"premium_success_title" = "Thành công";
+"premium_success_message" = "Tuyệt vời, giao dịch của bạn đã thành công!";
 
 
 /* ===== Documents (invoice & estimate) ===== */

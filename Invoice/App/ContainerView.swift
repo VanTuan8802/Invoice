@@ -31,6 +31,26 @@ struct ContainerView: View {
         #endif
     }
 
+    #if DEBUG
+    init() {
+        // `-uiPreviewPhase <phase>`: open a launch-flow phase directly (skips
+        // splash / ads / ATT), e.g. `-uiPreviewPhase businessDetails`. Applied
+        // before the first render, once per launch.
+        if !Self.didApplyPreviewPhase, let phase = Self.previewPhase {
+            Self.didApplyPreviewPhase = true
+            coordinator.debugShow(phase)
+        }
+    }
+
+    private static var didApplyPreviewPhase = false
+
+    private static var previewPhase: AppPhase? {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard let index = arguments.firstIndex(of: "-uiPreviewPhase"), index + 1 < arguments.count else { return nil }
+        return AppPhase(rawValue: arguments[index + 1])
+    }
+    #endif
+
     private var flow: some View {
         ZStack {
             switch coordinator.phase {
@@ -42,6 +62,27 @@ struct ContainerView: View {
                     .transition(.opacity)
             case .intro:
                 IntroView()
+                    .transition(.opacity)
+            case .welcome:
+                WelcomeView()
+                    .transition(.opacity)
+            case .businessDetails:
+                BusinessDetailsView()
+                    .transition(.opacity)
+            case .businessLogo:
+                BusinessLogoView()
+                    .transition(.opacity)
+            case .template:
+                TemplatePickerView()
+                    .transition(.opacity)
+            case .premium:
+                PremiumPlansScreen(context: .onboarding)
+                    .transition(.opacity)
+            case .premiumSuccess:
+                PremiumSuccessScreen(context: .onboarding)
+                    .transition(.opacity)
+            case .allSet:
+                AllSetView()
                     .transition(.opacity)
             case .home:
                 NavigationRoot(destination: .home, navigation: homeNavi)

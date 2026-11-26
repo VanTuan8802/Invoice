@@ -10,6 +10,13 @@ enum AnalyticsScreen: String {
     case splash
     case language                                  // first-launch language picker
     case intro
+    case welcome
+    case businessDetails = "business_details"
+    case businessLogo = "business_logo"
+    case onboardingTemplate = "onboarding_template"
+    case premiumPlans = "premium_plans"
+    case premiumSuccess = "premium_success"
+    case allSet = "all_set"
 
 
     // MARK: Home

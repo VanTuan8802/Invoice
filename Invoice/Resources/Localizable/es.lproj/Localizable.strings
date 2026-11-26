@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "Facturas";
+"onboarding_splash_ads_notice" = "Esta acción puede contener anuncios";
+"onboarding_intro_title_1" = "Crea facturas";
+"onboarding_intro_message_1" = "Crea facturas fácilmente con nuestra herramienta; personaliza, envía y controla los pagos sin complicaciones.";
+"onboarding_intro_title_2" = "Crea presupuestos";
+"onboarding_intro_message_2" = "Crea presupuestos precisos rápidamente; personaliza los detalles, compártelos con tus clientes y controla las aprobaciones sin esfuerzo.";
+"onboarding_intro_title_3" = "Plantillas variadas";
+"onboarding_intro_message_3" = "Accede a varias plantillas; personalízalas, úsalas para distintas necesidades y agiliza tu flujo de trabajo.";
+"onboarding_intro_title_4" = "Seguridad y protección";
+"onboarding_intro_message_4" = "Las facturas electrónicas pueden protegerse con firmas digitales o códigos QR, garantizando la integridad de los datos y evitando fraudes.";
+"onboarding_intro_start" = "Empezar";
+"onboarding_welcome_title" = "Bienvenido de nuevo";
+"onboarding_business_title" = "Datos de la empresa";
+"onboarding_business_subtitle" = "La información recopilada se usará en tus facturas y podrás editarla más tarde.";
+"onboarding_business_name" = "Nombre de la empresa";
+"onboarding_business_address" = "Dirección";
+"onboarding_business_phone" = "Número de teléfono";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "Sube el logotipo de tu empresa";
+"onboarding_logo_subtitle" = "Dale a tu factura un aspecto profesional y con tu marca.";
+"onboarding_logo_upload" = "Subir foto";
+"onboarding_logo_change" = "Cambiar foto";
+"onboarding_template_title" = "Selecciona una plantilla";
+"onboarding_template_subtitle" = "Elige entre plantillas profesionales que encajan con tu marca.";
+"onboarding_all_set_title" = "¡Todo listo!";
+"onboarding_all_set_message" = "Bienvenido al mundo de la facturación ultrarrápida";
+"onboarding_all_set_create_invoice" = "Crear nueva factura";
+"premium_badge" = "PREMIUM";
+"premium_feature_remove_ads" = "Sin anuncios";
+"premium_feature_unlock_all" = "Desbloquea todas las funciones premium";
+"premium_plan_trial" = "%d días de prueba gratis";
+"premium_plan_weekly" = "%@ / Semana";
+"premium_plan_lifetime" = "%@ / De por vida";
+"premium_most_popular" = "MÁS POPULAR";
+"premium_secured" = "Protegido por Apple Store. Cancela cuando quieras";
+"premium_terms" = "Términos de uso";
+"premium_restore" = "Restaurar compra";
+"premium_restore_empty" = "No se encontraron compras anteriores.";
+"premium_success_title" = "Completado";
+"premium_success_message" = "¡Genial, tu compra se ha completado!";
 
 
 /* ===== Documents (invoice & estimate) ===== */

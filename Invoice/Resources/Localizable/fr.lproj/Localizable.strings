@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "Factures";
+"onboarding_splash_ads_notice" = "Cette action peut contenir des publicités";
+"onboarding_intro_title_1" = "Créez des factures";
+"onboarding_intro_message_1" = "Créez facilement des factures avec notre outil ; personnalisez, envoyez et suivez les paiements en toute simplicité.";
+"onboarding_intro_title_2" = "Créez des devis";
+"onboarding_intro_message_2" = "Créez rapidement des devis précis ; personnalisez les détails, partagez-les avec vos clients et suivez les validations sans effort.";
+"onboarding_intro_title_3" = "Modèles variés";
+"onboarding_intro_message_3" = "Accédez à de nombreux modèles ; personnalisez-les, adaptez-les à vos besoins et simplifiez votre travail.";
+"onboarding_intro_title_4" = "Sécurité et protection";
+"onboarding_intro_message_4" = "Les factures électroniques peuvent être sécurisées par signature numérique ou QR code, garantissant l'intégrité des données et prévenant la fraude.";
+"onboarding_intro_start" = "Commencer";
+"onboarding_welcome_title" = "Bon retour";
+"onboarding_business_title" = "Informations sur l'entreprise";
+"onboarding_business_subtitle" = "Ces informations seront utilisées pour vos factures et pourront être modifiées plus tard.";
+"onboarding_business_name" = "Nom de l'entreprise";
+"onboarding_business_address" = "Adresse";
+"onboarding_business_phone" = "Numéro de téléphone";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "Importez le logo de votre entreprise";
+"onboarding_logo_subtitle" = "Donnez à vos factures un aspect professionnel et à votre image.";
+"onboarding_logo_upload" = "Importer une photo";
+"onboarding_logo_change" = "Changer de photo";
+"onboarding_template_title" = "Choisissez un modèle";
+"onboarding_template_subtitle" = "Choisissez parmi des modèles professionnels adaptés à votre image de marque.";
+"onboarding_all_set_title" = "Tout est prêt !";
+"onboarding_all_set_message" = "Bienvenue dans le monde de la facturation ultra-rapide";
+"onboarding_all_set_create_invoice" = "Créer une facture";
+"premium_badge" = "PREMIUM";
+"premium_feature_remove_ads" = "Supprimer les publicités";
+"premium_feature_unlock_all" = "Débloquez toutes les fonctionnalités premium";
+"premium_plan_trial" = "%d jours d'essai gratuit";
+"premium_plan_weekly" = "%@ / Semaine";
+"premium_plan_lifetime" = "%@ / À vie";
+"premium_most_popular" = "LE PLUS POPULAIRE";
+"premium_secured" = "Sécurisé par l'Apple Store. Annulable à tout moment";
+"premium_terms" = "Conditions d'utilisation";
+"premium_restore" = "Restaurer l'achat";
+"premium_restore_empty" = "Aucun achat précédent n'a été trouvé.";
+"premium_success_title" = "Réussi";
+"premium_success_message" = "Super, votre achat a bien été effectué !";
 
 
 /* ===== Documents (invoice & estimate) ===== */

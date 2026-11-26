@@ -55,16 +55,23 @@ struct LanguageView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            header
+            BasicHeaderView(
+                R.stringLocalizable.language(),
+                showBack: mode == .settings,
+                backAction: { cancel() },
+                trailingView: { saveButton }
+            )
+            .zIndex(1) // keep the tap guide under "Save" above the list
 
             ScrollView {
-                VStack(spacing: 12) {
+                VStack(spacing: 16) {
                     ForEach(AppLanguage.allCases) { language in
                         row(for: language)
                     }
                 }
-                .padding(.horizontal)
-                .padding(.top, 8)
+                .padding(.horizontal, 16)
+                .padding(.top, 2)
+                .padding(.bottom, 16)
             }
 
             if let vm = currentAdVM {
@@ -73,6 +80,7 @@ struct LanguageView: View {
                     .padding(.bottom, 8)
             }
         }
+        .groupedScreenBackground()
         .onAppear {
             originalLanguage = coordinator.language
             // Settings opens already on the current language; onboarding starts blank.
@@ -82,74 +90,55 @@ struct LanguageView: View {
         .trackScreen(mode == .onboarding ? .language : .settingsLanguage)
     }
 
-    private var header: some View {
-        VStack(spacing: 8) {
-            BasicHeaderView(
-                R.stringLocalizable.language(),
-                showBack: mode == .settings,
-                backAction: { cancel() },
-                trailingView: { doneButton }
-            )
-
-            if mode == .onboarding {
-                Text(R.stringLocalizable.please_select_language())
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-            }
-        }
-        .padding(.top, mode == .settings ? 8 : 4)
-    }
-
-    /// Top-right confirm. Disabled until a language is chosen (onboarding); the tap
-    /// guide flies here once a selection is made.
-    private var doneButton: some View {
-        Button {
+    /// Top-right blue "Save" pill. Disabled until a language is chosen
+    /// (onboarding); the tap guide flies here once a selection is made.
+    private var saveButton: some View {
+        HeaderTextButton(title: R.stringLocalizable.save()) {
             confirm()
-        } label: {
-            Image(systemName: "checkmark")
-                .font(.title3.weight(.bold))
-                .foregroundStyle(canConfirm ? Color.accentColor : Color.secondary.opacity(0.4))
-                .frame(width: 36, height: 36)
-                .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
         .disabled(!canConfirm)
+        .opacity(canConfirm ? 1 : 0.5)
         .overlay(alignment: .center) {
             if showButtonGuide {
-                tapGuide.offset(x: 16, y: 22)
+                tapGuide.offset(x: 4, y: 26)
             }
         }
     }
 
+    /// Selected: lavender 25% fill + 1pt ink border, radius 10.
+    /// Unselected: white card, radius 24. Both 52pt high.
     private func row(for language: AppLanguage) -> some View {
         let isSelected = hasChosen && coordinator.language == language
+        let radius: CGFloat = isSelected ? 10 : 24
         return Button {
             select(language)
         } label: {
-            HStack(spacing: 14) {
-                Text(language.flag)
-                    .font(.title)
+            HStack(spacing: 12) {
+                Image(language.flagImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 32, height: 24)
+                    .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4, style: .continuous)
+                            .strokeBorder(Color(R.color.colorE8E8EE), lineWidth: 0.5)
+                    )
                 Text(language.displayName)
-                    .font(.body.weight(.medium))
-                    .foregroundStyle(.primary)
-                Spacer()
-                if isSelected {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(Color.accentColor)
-                }
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color(R.color.color111118))
+                Spacer(minLength: 0)
             }
-            .padding()
+            .padding(.horizontal, 16)
+            .frame(height: 52)
             .background(
-                RoundedRectangle(cornerRadius: 14)
-                    .fill(isSelected ? Color.accentColor.opacity(0.12) : Color(.secondarySystemBackground))
+                RoundedRectangle(cornerRadius: radius, style: .continuous)
+                    .fill(isSelected ? Color(R.color.colorCFC3FF).opacity(0.25) : Color(R.color.colorFFFFFF))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(isSelected ? Color.accentColor : .clear, lineWidth: 1.5)
+                RoundedRectangle(cornerRadius: radius, style: .continuous)
+                    .strokeBorder(isSelected ? Color(R.color.color111118) : .clear, lineWidth: 1)
             )
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .overlay(alignment: .trailing) {

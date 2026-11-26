@@ -66,6 +66,46 @@
 
 
 /* ===== Onboarding & premium ===== */
+"onboarding_app_name" = "請求書";
+"onboarding_splash_ads_notice" = "この操作には広告が含まれる場合があります";
+"onboarding_intro_title_1" = "請求書を作成";
+"onboarding_intro_message_1" = "ツールで簡単に請求書を作成。カスタマイズ、送信、支払いの追跡もスムーズに。";
+"onboarding_intro_title_2" = "見積書を作成";
+"onboarding_intro_message_2" = "正確な見積書をすばやく作成。詳細をカスタマイズし、顧客と共有して、承認状況も簡単に確認。";
+"onboarding_intro_title_3" = "多彩なテンプレート";
+"onboarding_intro_message_3" = "さまざまなテンプレートを利用可能。用途に合わせてカスタマイズし、業務を効率化。";
+"onboarding_intro_title_4" = "セキュリティと保護";
+"onboarding_intro_message_4" = "電子請求書はデジタル署名やQRコードで保護でき、データの完全性を守り不正を防ぎます。";
+"onboarding_intro_start" = "開始";
+"onboarding_welcome_title" = "おかえりなさい";
+"onboarding_business_title" = "事業者情報";
+"onboarding_business_subtitle" = "入力した情報は請求書に使用され、後から編集できます。";
+"onboarding_business_name" = "事業者名";
+"onboarding_business_address" = "住所";
+"onboarding_business_phone" = "電話番号";
+"onboarding_business_phone_placeholder" = "0122  256 256";
+"onboarding_logo_title" = "事業者ロゴをアップロード";
+"onboarding_logo_subtitle" = "請求書をプロフェッショナルでブランドらしい見た目に。";
+"onboarding_logo_upload" = "写真をアップロード";
+"onboarding_logo_change" = "写真を変更";
+"onboarding_template_title" = "テンプレートを選択";
+"onboarding_template_subtitle" = "ブランドに合うプロ仕様のテンプレートから選べます。";
+"onboarding_all_set_title" = "準備完了！";
+"onboarding_all_set_message" = "超高速の請求書作成の世界へようこそ";
+"onboarding_all_set_create_invoice" = "新しい請求書を作成";
+"premium_badge" = "プレミアム";
+"premium_feature_remove_ads" = "広告を削除";
+"premium_feature_unlock_all" = "すべてのプレミアム機能を解放";
+"premium_plan_trial" = "%d日間の無料トライアル";
+"premium_plan_weekly" = "%@ / 週";
+"premium_plan_lifetime" = "%@ / 買い切り";
+"premium_most_popular" = "一番人気";
+"premium_secured" = "Apple Storeで安全に決済。いつでも解約可能";
+"premium_terms" = "利用規約";
+"premium_restore" = "購入を復元";
+"premium_restore_empty" = "以前の購入は見つかりませんでした。";
+"premium_success_title" = "完了";
+"premium_success_message" = "購入が完了しました！";
 
 
 /* ===== Documents (invoice & estimate) ===== */
