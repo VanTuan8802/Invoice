@@ -9,35 +9,15 @@
 /* Titles */
 "settings" = "Réglages";
 
-/* Language picker */
-"choose_your_language" = "Choisissez votre langue";
-"change_language_later" = "Vous pourrez le modifier plus tard dans les Réglages.";
-"please_select_language" = "Veuillez sélectionner votre langue";
 
 /* Settings */
-"general" = "Général";
 "language" = "Langue";
 "about" = "À propos";
-"app" = "App";
-"version" = "Version";
-"developer" = "Développeur";
-"replay_onboarding" = "Revoir l’introduction";
 
-/* Onboarding intro */
-"intro_title_1" = "Tout au même endroit";
-"intro_message_1" = "Un point de départ épuré avec la navigation, les onglets et l’introduction déjà en place.";
-"intro_title_2" = "Développez plus vite";
-"intro_message_2" = "Des modules réutilisables vous permettent de vous concentrer sur les fonctionnalités plutôt que sur la tuyauterie.";
-"intro_title_3" = "Prêt à publier";
-"intro_message_3" = "Des réglages par défaut judicieux et un cœur de navigation testé, prêts à l’emploi.";
 
 /* Settings actions */
-"rate" = "Évaluez-nous";
-"share" = "Partager l'app";
 "privacy_policy" = "Politique de confidentialité";
 
-/* Splash */
-"loading" = "Chargement";
 
 /* Common actions (generic: save, continue, skip, next, back, get_started above) */
 "common_cancel" = "Annuler";
