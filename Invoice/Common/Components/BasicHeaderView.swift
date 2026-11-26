@@ -60,10 +60,16 @@ struct BasicHeaderView<Leading: View, Trailing: View>: View {
                 trailing
             }
         }
-        .frame(height: 52)
+        // Figma toolbar: 60pt tall with the 44pt controls at its top, so content
+        // starts 16pt below the buttons instead of right under them.
+        .frame(height: Self.controlsHeight)
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
+        .padding(.bottom, Self.bottomSpacing)
     }
+
+    static var controlsHeight: CGFloat { 44 }
+    static var bottomSpacing: CGFloat { 16 }
 
     // MARK: - Slots
 
@@ -110,29 +116,39 @@ struct HeaderIconButton: View {
     }
 }
 
-/// Blue prominent pill used for "Save" / "Done" in the toolbar.
+/// Blue prominent pill used for "Save" / "Done" in the toolbar — 34pt tall like
+/// the design (the system `.glassProminent` + `.large` pill is ~44pt and crowds
+/// the content below).
 struct HeaderTextButton: View {
     /// Already-localized text, e.g. `R.stringLocalizable.save()`.
     let title: String
     let action: () -> Void
 
+    @Environment(\.isEnabled) private var isEnabled
+
     var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.headline)
+                .foregroundStyle(Color(R.color.colorFFFFFF))
+                .padding(.horizontal, 14)
+                .frame(minWidth: 64)
+                .frame(height: 34)
+                .background(pill)
+                .contentShape(Capsule())
+                .opacity(isEnabled ? 1 : 0.45)
+        }
+        .buttonStyle(.plain)
+    }
+
+    @ViewBuilder
+    private var pill: some View {
         if #available(iOS 26.0, *) {
-            Button(action: action) {
-                Text(title).font(.headline).padding(.horizontal, 4)
-            }
-            .buttonStyle(.glassProminent)
-            .controlSize(.large)
+            Capsule()
+                .fill(Color.accentColor)
+                .glassEffect(.regular.tint(Color.accentColor).interactive(), in: .capsule)
         } else {
-            Button(action: action) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundStyle(Color(R.color.colorFFFFFF))
-                    .padding(.horizontal, 16)
-                    .frame(height: 36)
-                    .background(Capsule().fill(Color.accentColor))
-            }
-            .buttonStyle(.plain)
+            Capsule().fill(Color.accentColor)
         }
     }
 }
