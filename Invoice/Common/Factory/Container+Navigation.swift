@@ -22,22 +22,30 @@ extension Container {
     }
 }
 
-// MARK: - One navigation tree per tab
+// MARK: - Navigation (single stack rooted at Home)
 
 extension Container {
     var homeNavi: Factory<Navigation> {
         Factory(self) { @MainActor in Navigation() }.singleton
     }
+}
 
-    var searchNavi: Factory<Navigation> {
-        Factory(self) { @MainActor in Navigation() }.singleton
+// MARK: - Data
+
+extension Container {
+    /// In-memory invoices, estimates, clients, items and business profile.
+    var dataStore: Factory<DataStore> {
+        Factory(self) { @MainActor in
+            #if DEBUG
+            DataStore(seeded: !UIPreview.isEmptyData)
+            #else
+            DataStore()
+            #endif
+        }.singleton
     }
 
-    var favoritesNavi: Factory<Navigation> {
-        Factory(self) { @MainActor in Navigation() }.singleton
-    }
-
-    var settingsNavi: Factory<Navigation> {
-        Factory(self) { @MainActor in Navigation() }.singleton
+    /// The invoice/estimate currently being edited (shared by the editor and its field screens).
+    var documentEditor: Factory<DocumentEditor> {
+        Factory(self) { @MainActor in DocumentEditor(store: self.dataStore()) }.singleton
     }
 }

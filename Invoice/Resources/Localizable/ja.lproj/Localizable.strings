@@ -6,10 +6,7 @@
 "get_started" = "はじめる";
 "back" = "戻る";
 
-/* Tabs */
-"home" = "ホーム";
-"search" = "検索";
-"favorites" = "お気に入り";
+/* Titles */
 "settings" = "設定";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "開発者";
 "replay_onboarding" = "オンボーディングを再生";
 
-/* Home */
-"item_number" = "アイテム %d";
-"open_next" = "次を開く";
-"back_to_top" = "先頭へ戻る";
-
-/* Search */
-"search_placeholder" = "検索…";
-"start_typing" = "入力してください";
-"no_results_for" = "「%@」の結果がありません";
-
-/* Favorites */
-"nothing_saved_yet" = "まだ保存されていません";
-
 /* Onboarding intro */
 "intro_title_1" = "すべてをひとつに";
 "intro_message_1" = "ナビゲーション、タブ、オンボーディングがあらかじめ組み込まれた、すっきりした出発点です。";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "読み込み中";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "キャンセル";
+"common_done" = "完了";
+"common_delete" = "削除";
+"common_edit" = "編集";
+"common_add" = "追加";
+"common_discard" = "破棄";
+"common_keep_editing" = "編集を続ける";
+"common_ok" = "OK";
+"common_close" = "閉じる";
+"common_share" = "共有";
+"common_none" = "なし";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */

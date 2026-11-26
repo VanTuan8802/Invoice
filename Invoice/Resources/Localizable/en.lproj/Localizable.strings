@@ -6,10 +6,7 @@
 "get_started" = "Get Started";
 "back" = "Back";
 
-/* Tabs */
-"home" = "Home";
-"search" = "Search";
-"favorites" = "Favorites";
+/* Titles */
 "settings" = "Settings";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "Developer";
 "replay_onboarding" = "Replay onboarding";
 
-/* Home */
-"item_number" = "Item %d";
-"open_next" = "Open next";
-"back_to_top" = "Back to top";
-
-/* Search */
-"search_placeholder" = "Search…";
-"start_typing" = "Start typing";
-"no_results_for" = "No results for “%@”";
-
-/* Favorites */
-"nothing_saved_yet" = "Nothing saved yet";
-
 /* Onboarding intro */
 "intro_title_1" = "Everything in one place";
 "intro_message_1" = "A clean starting point with navigation, tabs and onboarding already wired up.";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "Loading";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "Cancel";
+"common_done" = "Done";
+"common_delete" = "Delete";
+"common_edit" = "Edit";
+"common_add" = "Add";
+"common_discard" = "Discard";
+"common_keep_editing" = "Keep editing";
+"common_ok" = "OK";
+"common_close" = "Close";
+"common_share" = "Share";
+"common_none" = "None";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */

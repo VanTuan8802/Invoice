@@ -6,10 +6,7 @@
 "get_started" = "Bắt đầu";
 "back" = "Quay lại";
 
-/* Tabs */
-"home" = "Trang chủ";
-"search" = "Tìm kiếm";
-"favorites" = "Yêu thích";
+/* Titles */
 "settings" = "Cài đặt";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "Nhà phát triển";
 "replay_onboarding" = "Xem lại hướng dẫn";
 
-/* Home */
-"item_number" = "Mục %d";
-"open_next" = "Mở mục tiếp theo";
-"back_to_top" = "Về đầu trang";
-
-/* Search */
-"search_placeholder" = "Tìm kiếm…";
-"start_typing" = "Bắt đầu nhập";
-"no_results_for" = "Không có kết quả cho “%@”";
-
-/* Favorites */
-"nothing_saved_yet" = "Chưa lưu mục nào";
-
 /* Onboarding intro */
 "intro_title_1" = "Tất cả ở một nơi";
 "intro_message_1" = "Một điểm khởi đầu gọn gàng với điều hướng, tab và onboarding đã được thiết lập sẵn.";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "Đang tải";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "Hủy";
+"common_done" = "Xong";
+"common_delete" = "Xóa";
+"common_edit" = "Sửa";
+"common_add" = "Thêm";
+"common_discard" = "Bỏ thay đổi";
+"common_keep_editing" = "Tiếp tục sửa";
+"common_ok" = "OK";
+"common_close" = "Đóng";
+"common_share" = "Chia sẻ";
+"common_none" = "Không";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */

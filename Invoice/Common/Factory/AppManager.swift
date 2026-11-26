@@ -7,14 +7,12 @@
 
 import Foundation
 import Combine
+import Factory
 
 @MainActor
 final class AppManager: ObservableObject {
-    /// The currently selected tab.
-    @Published var activeTab: HomeTab = .home
-
-    /// The navigation tree of the active tab. `HomeTabView` keeps this in sync.
-    @Published var navi: Navigation = Navigation()
+    /// The app's navigation tree (one stack rooted at Home).
+    @Published var navi: Navigation = Container.shared.homeNavi()
 
     /// Whether the app is currently backgrounded.
     @Published var isInBackground: Bool = false

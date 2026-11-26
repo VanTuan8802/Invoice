@@ -6,10 +6,7 @@
 "get_started" = "Empezar";
 "back" = "Atrás";
 
-/* Tabs */
-"home" = "Inicio";
-"search" = "Buscar";
-"favorites" = "Favoritos";
+/* Titles */
 "settings" = "Ajustes";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "Desarrollador";
 "replay_onboarding" = "Repetir introducción";
 
-/* Home */
-"item_number" = "Elemento %d";
-"open_next" = "Abrir siguiente";
-"back_to_top" = "Volver arriba";
-
-/* Search */
-"search_placeholder" = "Buscar…";
-"start_typing" = "Empieza a escribir";
-"no_results_for" = "Sin resultados para “%@”";
-
-/* Favorites */
-"nothing_saved_yet" = "Aún no hay nada guardado";
-
 /* Onboarding intro */
 "intro_title_1" = "Todo en un solo lugar";
 "intro_message_1" = "Un punto de partida limpio con navegación, pestañas e introducción ya configurados.";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "Cargando";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "Cancelar";
+"common_done" = "Listo";
+"common_delete" = "Eliminar";
+"common_edit" = "Editar";
+"common_add" = "Añadir";
+"common_discard" = "Descartar";
+"common_keep_editing" = "Seguir editando";
+"common_ok" = "Aceptar";
+"common_close" = "Cerrar";
+"common_share" = "Compartir";
+"common_none" = "Ninguno";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */

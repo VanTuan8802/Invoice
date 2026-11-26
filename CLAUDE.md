@@ -1,5 +1,28 @@
 # Invoice — quy ước dự án
 
+## Màn hình & điều hướng
+
+- Design: Figma `Invoice iOS` (bản "Invoice iOS 27"). SwiftUI, deploy iOS 16 — API iOS 26 (glass) phải
+  bọc `if #available(iOS 26.0, *)`.
+- Một stack điều hướng gốc là Home (`Container.homeNavi`): `app.navi.push(.client(.edit(id: nil)))`,
+  `app.navi.push(..., type: .sheet())`, `app.navi.pop()`.
+- Mỗi chức năng có route enum riêng `Views/<Feature>/<Feature>Route.swift` (case + `identifier` +
+  `screen` + `debugPreviews`). `Destination` chỉ chuyển tiếp, không thêm switch riêng cho màn.
+- Router ẩn navigation bar hệ thống: mỗi màn tự vẽ `BasicHeaderView` (nút tròn glass + tiêu đề giữa,
+  trailing `HeaderIconButton` / `HeaderTextButton`) hoặc `LargeTitleHeader`.
+- Component chung (`Common/Components`, `Common/DesignSystem`): `PrimaryButton(.primary/.outline)`,
+  `FloatingActionButton` / `.floatingActionButton {}`, `SearchEntryField`, `LabeledInputField`,
+  `EmptyStateView`, `.cardSurface()`, `.groupedScreenBackground()`, `.glassCircle()`, `.glassCapsule()`.
+- Form kiểu iOS (nhãn trái, giá trị phải, nhóm bo góc) dùng `Form`/`List` `.insetGrouped`, không tự dựng.
+- Dữ liệu (`Domain/`): model `Document` (invoice/estimate), `Client`, `CatalogItem`, `BusinessProfile`;
+  `DataStore` (`Container.dataStore`) giữ dữ liệu mẫu trong bộ nhớ; `DocumentEditor`
+  (`Container.documentEditor`) là tài liệu đang sửa, dùng chung cho editor và các màn field.
+- Text key đặt tiền tố theo chức năng (`home_`, `onboarding_`, `doc_`, `field_`, `client_`, `item_`,
+  `reports_`, `settings_`), ghi vào đúng khu `/* ===== … ===== */` của chức năng trong cả 6 file.
+  Hành động chung: `save`, `continue`, `skip`, `next`, `back`, `get_started`, `common_*`.
+- Kiểm tra trên simulator (DEBUG): `-uiPreview <key>` mở thẳng route (bỏ qua splash/ads/onboarding),
+  `-uiPreviewEmpty` để dữ liệu rỗng. Build dòng lệnh cần `-skipPackagePluginValidation`.
+
 ## Tài nguyên: luôn dùng R.swift
 
 - Text: `R.stringLocalizable.<key>()` (theo ngôn ngữ chọn trong app). Key có `%d`/`%@` là hàm có

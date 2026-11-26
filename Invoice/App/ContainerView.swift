@@ -10,8 +10,28 @@ import Factory
 
 struct ContainerView: View {
     @InjectedObject(\.appFlow) private var coordinator: AppFlowCoordinator
+    @InjectedObject(\.homeNavi) private var homeNavi: Navigation
 
     var body: some View {
+        content
+            .environmentObject(coordinator)
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        #if DEBUG
+        if let destination = UIPreview.destination {
+            NavigationRoot(destination: destination, navigation: homeNavi)
+                .onAppear { UIPreview.prepare() }
+        } else {
+            flow
+        }
+        #else
+        flow
+        #endif
+    }
+
+    private var flow: some View {
         ZStack {
             switch coordinator.phase {
             case .splash:
@@ -24,11 +44,10 @@ struct ContainerView: View {
                 IntroView()
                     .transition(.opacity)
             case .home:
-                HomeTabView()
+                NavigationRoot(destination: .home, navigation: homeNavi)
                     .transition(.opacity)
             }
         }
-        .environmentObject(coordinator)
         // Views that show localized text observe `coordinator`, so they re-render
         // (and re-read `R.stringLocalizable`) when the language changes at runtime — no
         // destructive `.id(...)` rebuild that would reset state or close sheets.

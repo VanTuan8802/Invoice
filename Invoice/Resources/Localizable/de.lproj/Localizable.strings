@@ -6,10 +6,7 @@
 "get_started" = "Los geht’s";
 "back" = "Zurück";
 
-/* Tabs */
-"home" = "Start";
-"search" = "Suchen";
-"favorites" = "Favoriten";
+/* Titles */
 "settings" = "Einstellungen";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "Entwickler";
 "replay_onboarding" = "Einführung wiederholen";
 
-/* Home */
-"item_number" = "Element %d";
-"open_next" = "Nächstes öffnen";
-"back_to_top" = "Nach oben";
-
-/* Search */
-"search_placeholder" = "Suchen…";
-"start_typing" = "Tippe los";
-"no_results_for" = "Keine Ergebnisse für „%@“";
-
-/* Favorites */
-"nothing_saved_yet" = "Noch nichts gespeichert";
-
 /* Onboarding intro */
 "intro_title_1" = "Alles an einem Ort";
 "intro_message_1" = "Ein sauberer Ausgangspunkt mit bereits eingerichteter Navigation, Tabs und Einführung.";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "Laden";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "Abbrechen";
+"common_done" = "Fertig";
+"common_delete" = "Löschen";
+"common_edit" = "Bearbeiten";
+"common_add" = "Hinzufügen";
+"common_discard" = "Verwerfen";
+"common_keep_editing" = "Weiter bearbeiten";
+"common_ok" = "OK";
+"common_close" = "Schließen";
+"common_share" = "Teilen";
+"common_none" = "Keine";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */

@@ -6,10 +6,7 @@
 "get_started" = "Commencer";
 "back" = "Retour";
 
-/* Tabs */
-"home" = "Accueil";
-"search" = "Rechercher";
-"favorites" = "Favoris";
+/* Titles */
 "settings" = "Réglages";
 
 /* Language picker */
@@ -26,19 +23,6 @@
 "developer" = "Développeur";
 "replay_onboarding" = "Revoir l’introduction";
 
-/* Home */
-"item_number" = "Élément %d";
-"open_next" = "Ouvrir le suivant";
-"back_to_top" = "Revenir en haut";
-
-/* Search */
-"search_placeholder" = "Rechercher…";
-"start_typing" = "Commencez à taper";
-"no_results_for" = "Aucun résultat pour « %@ »";
-
-/* Favorites */
-"nothing_saved_yet" = "Rien d’enregistré pour l’instant";
-
 /* Onboarding intro */
 "intro_title_1" = "Tout au même endroit";
 "intro_message_1" = "Un point de départ épuré avec la navigation, les onglets et l’introduction déjà en place.";
@@ -54,3 +38,34 @@
 
 /* Splash */
 "loading" = "Chargement";
+
+/* Common actions (generic: save, continue, skip, next, back, get_started above) */
+"common_cancel" = "Annuler";
+"common_done" = "OK";
+"common_delete" = "Supprimer";
+"common_edit" = "Modifier";
+"common_add" = "Ajouter";
+"common_discard" = "Ignorer";
+"common_keep_editing" = "Continuer";
+"common_ok" = "OK";
+"common_close" = "Fermer";
+"common_share" = "Partager";
+"common_none" = "Aucun";
+
+
+/* ===== Home ===== */
+
+
+/* ===== Onboarding & premium ===== */
+
+
+/* ===== Documents (invoice & estimate) ===== */
+
+
+/* ===== Document fields ===== */
+
+
+/* ===== Client, item & reports ===== */
+
+
+/* ===== Settings ===== */
