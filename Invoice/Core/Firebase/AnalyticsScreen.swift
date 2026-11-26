@@ -31,4 +31,12 @@ enum AnalyticsScreen: String {
     // MARK: Settings
     case settings
     case settingsLanguage = "settings_language"    // language screen opened from Settings
+    case settingsBusinessInfo = "settings_business_info"
+    case settingsInvoiceNumber = "settings_invoice_number"
+    case settingsUnit = "settings_unit"
+    case settingsCurrencyPicker = "settings_currency_picker"
+    case settingsDefaultEmail = "settings_default_email"
+    case settingsReminders = "settings_reminders"
+    case settingsBackup = "settings_backup"
+    case settingsExport = "settings_export"
 }
