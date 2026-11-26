@@ -85,14 +85,14 @@ struct LanguageView: View {
     private var header: some View {
         VStack(spacing: 8) {
             BasicHeaderView(
-                "language".localized,
+                R.stringLocalizable.language(),
                 showBack: mode == .settings,
                 backAction: { cancel() },
                 trailingView: { doneButton }
             )
 
             if mode == .onboarding {
-                Text("please_select_language".localized)
+                Text(R.stringLocalizable.please_select_language())
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity)

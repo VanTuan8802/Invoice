@@ -57,7 +57,7 @@ struct SplashView: View {
                     .frame(width: 200)
                     .animation(.easeInOut(duration: 0.3), value: step)
 
-                Text("\("loading".localized) \(Int(step.progress * 100))%")
+                Text("\(R.stringLocalizable.loading()) \(Int(step.progress * 100))%")
                     .font(.footnote.monospacedDigit())
                     .foregroundStyle(.secondary)
                     .contentTransition(.numericText())

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicHeaderView<Leading: View, Trailing: View>: View {
 
-    /// Shown centered. Pass an already-localized string (e.g. `"home".localized`).
+    /// Shown centered. Pass an already-localized string (e.g. `R.stringLocalizable.home()`).
     let title: String
 
     /// When `true`, the leading slot shows a default back chevron that calls

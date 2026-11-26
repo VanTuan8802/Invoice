@@ -13,7 +13,7 @@ final class OnboardingStore {
 
     private enum Keys {
         static let didOnboard = "appflow.didCompleteOnboarding"
-        // Shared with `String.localized` so the picked language drives lookups.
+        // Read by `R.stringLocalizable` so the picked language drives lookups.
         static let language = Constants.Key.languageSelected
     }
 
@@ -32,4 +32,8 @@ final class OnboardingStore {
         get { AppLanguage(rawValue: defaults.string(forKey: Keys.language) ?? "") }
         set { defaults.set(newValue?.rawValue, forKey: Keys.language) }
     }
+
+    /// Language used for text lookups (`R.stringLocalizable`): the persisted
+    /// choice, or English until the user has picked one.
+    var currentLanguage: AppLanguage { language ?? .english }
 }

@@ -36,15 +36,32 @@ SwiftBase/
 │   ├── Components/         # BasicHeaderView, PrimaryButton, LottieTapView
 │   ├── Factory/           # Container+Navigation (DI), AppManager
 │   └── AppConstant/       # AppConstants (appId, policyLink…)
-├── Extensions/            # String+Localized, View+CardSurface
+├── Extensions/            # R+Localizable (R.stringLocalizable), View+CardSurface
 ├── Services/              # OnboardingStore (UserDefaults)
 ├── Views/                 # Splash, Language, Intro, Home, Search, Favorites, Settings, TabView
-└── Resources/             # Info.plist, Assets, Localizable (6 ngôn ngữ), Json (Lottie), GoogleService-Info*
+└── Resources/             # Info.plist, Assets (Colors / Icons / Images), Localizable (6 ngôn ngữ), Json (Lottie), GoogleService-Info*
 ```
 
 **Phụ thuộc (SPM):** `ads-swift`, `GoogleMobileAds`, `firebase-ios-sdk` (Core + RemoteConfig +
 Analytics), `AdjustSdk`, `UserMessagingPlatform`, `FBSDKCoreKit`/`FBAudienceNetwork`,
-`Lottie (lottie-spm)`, `Factory`.
+`Lottie (lottie-spm)`, `Factory`, `R.swift` (plugin `RswiftGenerateInternalResources` + `RswiftLibrary`).
+
+### Assets (`Resources/Assets.xcassets`)
+
+```
+Assets.xcassets/
+├── AppIcon, AccentColor     # tên Xcode dành riêng, để nguyên ở gốc
+├── Colors/                  # colorRRGGBB.colorset
+├── Icons/<ChứcNăng>/        # icon, chia folder theo chức năng
+└── Images/<ChứcNăng>/       # ảnh, chia folder theo chức năng
+```
+
+- **Colors:** tên = `color` + mã hex 6 ký tự in hoa (`colorFFFFFF`) → `Color(R.color.colorFFFFFF)`.
+  Mỗi colorset chỉ chứa đúng màu đó; mã đã có thì dùng lại.
+- **Icons / Images:** mỗi chức năng một folder con (`Icons/Home`, `Images/Intro`, …; dùng chung → `Common`)
+  → `Image(R.image.<tên>)`. Folder không bật *Provides Namespace* nên tên asset phải duy nhất toàn
+  catalog: đặt tên kèm chức năng, vd `ic_home_add`, `img_intro_1`.
+- SF Symbols (`Image(systemName:)`) giữ nguyên; không gọi `Image("…")` / `UIImage(named:)` / `Color("…")` bằng chuỗi.
 
 ---
 
@@ -151,10 +168,12 @@ InterHomeUtil.instance.show(placement: .home) { [weak self] in
 ## 5. Đa ngôn ngữ
 
 - File: `Resources/Localizable/<lang>.lproj/Localizable.strings` (6 ngôn ngữ).
-- Dùng: `"key".localized` (đọc theo ngôn ngữ đã chọn trong UserDefaults, không cần restart).
+- Dùng: `R.stringLocalizable.key()` (R.swift gen từ `Localizable.strings`; đọc theo ngôn ngữ đã chọn
+  trong UserDefaults, không cần restart). Key có `%d`/`%@` thành hàm có tham số:
+  `R.stringLocalizable.item_number(id)`. Không dùng chuỗi key thô (`"key".localized`) nữa.
 - Đổi ngôn ngữ runtime: view quan sát `AppFlowCoordinator` (vd `@InjectedObject(\.appFlow)`)
   để re-render khi `coordinator.language` đổi.
-- **Thêm key:** thêm vào cả 6 file. Thêm ngôn ngữ mới: thêm case vào `AppLanguage` + tạo
+- **Thêm key:** thêm vào cả 6 file, build lại là có `R.stringLocalizable.<key>`. Thêm ngôn ngữ mới: thêm case vào `AppLanguage` + tạo
   thư mục `<code>.lproj`.
 
 ---

@@ -23,6 +23,8 @@
 		5F0277B32FE3EFCF00CFAE5F /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5F0277B22FE3EFCF00CFAE5F /* FirebaseCore */; };
 		5F0277B62FE3F03A00CFAE5F /* AdjustSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 5F0277B52FE3F03A00CFAE5F /* AdjustSdk */; };
 		5F0277B82FE3F05100CFAE5F /* AdjustSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 5F0277B72FE3F05100CFAE5F /* AdjustSdk */; };
+		5FA000010000000000000006 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA000010000000000000002 /* RswiftLibrary */; };
+		5FA000010000000000000007 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA000010000000000000003 /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,7 @@
 				5F0277A12FE3EF0500CFAE5F /* FirebaseAnalytics in Frameworks */,
 				5F0277B62FE3F03A00CFAE5F /* AdjustSdk in Frameworks */,
 				5F02779F2FE3EF0000CFAE5F /* ads-swift in Frameworks */,
+				5FA000010000000000000006 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 				5F0277AB2FE3EF4200CFAE5F /* FirebaseAnalytics in Frameworks */,
 				5F0277B82FE3F05100CFAE5F /* AdjustSdk in Frameworks */,
 				5F0277A72FE3EF3700CFAE5F /* ads-swift in Frameworks */,
+				5FA000010000000000000007 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5FA000010000000000000008 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5F246F362FE3A1E300F2A107 /* Invoice */,
@@ -149,6 +154,7 @@
 				5F0277A42FE3EF1C00CFAE5F /* FirebaseRemoteConfig */,
 				5F0277B22FE3EFCF00CFAE5F /* FirebaseCore */,
 				5F0277B52FE3F03A00CFAE5F /* AdjustSdk */,
+				5FA000010000000000000002 /* RswiftLibrary */,
 			);
 			productName = Invoice;
 			productReference = 3A1F00010000000000000001 /* Invoice.app */;
@@ -165,6 +171,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5FA000010000000000000009 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5F246F362FE3A1E300F2A107 /* Invoice */,
@@ -179,6 +186,7 @@
 				5F0277AE2FE3EF7300CFAE5F /* FirebaseRemoteConfig */,
 				5F0277B02FE3EFC200CFAE5F /* FirebaseCore */,
 				5F0277B72FE3F05100CFAE5F /* AdjustSdk */,
+				5FA000010000000000000003 /* RswiftLibrary */,
 			);
 			productName = "Invoice-dev";
 			productReference = 3A1F00010000000000000002 /* Invoice-dev.app */;
@@ -222,6 +230,7 @@
 				5F0277602FE3EC9900CFAE5F /* XCRemoteSwiftPackageReference "ads-swift" */,
 				5F02779C2FE3EE3100CFAE5F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				5F0277B42FE3F03A00CFAE5F /* XCRemoteSwiftPackageReference "ios_sdk" */,
+				5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3A1F00010000000000000007 /* Products */;
@@ -289,6 +298,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FA000010000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5FA000010000000000000004 /* RswiftGenerateInternalResources */;
+		};
+		5FA000010000000000000009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5FA000010000000000000005 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3A1F0001000000000000000E /* Debug */ = {
@@ -591,6 +611,14 @@
 				kind = branch;
 			};
 		};
+		5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -673,6 +701,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F0277B42FE3F03A00CFAE5F /* XCRemoteSwiftPackageReference "ios_sdk" */;
 			productName = AdjustSdk;
+		};
+		5FA000010000000000000002 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		5FA000010000000000000003 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		5FA000010000000000000004 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		5FA000010000000000000005 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA000010000000000000001 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -89,10 +89,10 @@ struct IntroView: View {
                 .font(.system(size: 96, weight: .bold))
                 .foregroundStyle(page.tint)
             VStack(spacing: 12) {
-                Text(page.title.localized)
+                Text(page.title())
                     .font(.title.bold())
                     .multilineTextAlignment(.center)
-                Text(page.message.localized)
+                Text(page.message())
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -113,7 +113,7 @@ struct IntroView: View {
                 withAnimation { index += 1 }
             }
         } label: {
-            Text((isLast ? "get_started" : "next").localized)
+            Text(isLast ? R.stringLocalizable.get_started() : R.stringLocalizable.next())
                 .font(.headline)
                 .foregroundStyle(Color.accentColor)
                 .frame(maxWidth: .infinity)

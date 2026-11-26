@@ -14,7 +14,7 @@ struct SettingsScreen: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            BasicHeaderView("settings".localized)
+            BasicHeaderView(R.stringLocalizable.settings())
 
             List {
                 Section {
@@ -22,7 +22,7 @@ struct SettingsScreen: View {
                         viewModel.openLanguage()
                     } label: {
                         HStack {
-                            Label("language".localized, systemImage: "globe")
+                            Label(R.stringLocalizable.language(), systemImage: "globe")
                             Spacer()
                             Text("\(coordinator.language.flag) \(coordinator.language.displayName)")
                                 .foregroundStyle(.secondary)
@@ -36,19 +36,19 @@ struct SettingsScreen: View {
                     Button {
                         viewModel.rateApp()
                     } label: {
-                        row("rate".localized, systemImage: "star.fill")
+                        row(R.stringLocalizable.rate(), systemImage: "star.fill")
                     }
                     .tint(.primary)
 
                     ShareLink(item: viewModel.shareMessage) {
-                        row("share".localized, systemImage: "square.and.arrow.up")
+                        row(R.stringLocalizable.share(), systemImage: "square.and.arrow.up")
                     }
                     .tint(.primary)
 
                     Button {
                         if let url = viewModel.policyURL { openURL(url) }
                     } label: {
-                        row("privacy_policy".localized, systemImage: "lock.shield.fill")
+                        row(R.stringLocalizable.privacy_policy(), systemImage: "lock.shield.fill")
                     }
                     .tint(.primary)
                 }

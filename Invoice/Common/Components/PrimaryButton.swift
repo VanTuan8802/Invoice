@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PrimaryButton: View {
+    /// Already-localized text, e.g. `R.stringLocalizable.continue()`.
     let title: String
     let action: () -> Void
 
@@ -18,7 +19,7 @@ struct PrimaryButton: View {
 
     var body: some View {
         Button(action: action) {
-            Text(title.localized)
+            Text(title)
                 .font(.headline)
                 .frame(maxWidth: .infinity)
                 .padding()
@@ -30,7 +31,7 @@ struct PrimaryButton: View {
 
 #if DEBUG
 #Preview {
-    PrimaryButton("continue") {}
+    PrimaryButton(R.stringLocalizable.continue()) {}
         .padding()
 }
 #endif

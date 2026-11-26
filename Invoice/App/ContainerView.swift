@@ -30,7 +30,7 @@ struct ContainerView: View {
         }
         .environmentObject(coordinator)
         // Views that show localized text observe `coordinator`, so they re-render
-        // (and re-read `.localized`) when the language changes at runtime — no
+        // (and re-read `R.stringLocalizable`) when the language changes at runtime — no
         // destructive `.id(...)` rebuild that would reset state or close sheets.
         .animation(.easeInOut(duration: 0.35), value: coordinator.phase)
     }

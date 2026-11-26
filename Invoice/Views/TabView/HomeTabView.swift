@@ -19,7 +19,7 @@ struct HomeTabView: View {
     @State private var isFirstAppear = false
 
     var body: some View {
-        // Observe the language so the tab titles re-read `.localized` when it
+        // Observe the language so the tab titles re-read `R.stringLocalizable` when it
         // changes at runtime (e.g. from the Settings language sheet).
         let _ = coordinator.language
         return TabView(selection: $app.activeTab) {

@@ -15,10 +15,10 @@ enum HomeTab: Hashable, CaseIterable {
 
     var title: String {
         switch self {
-        case .home:      return "home".localized
-        case .search:    return "search".localized
-        case .favorites: return "favorites".localized
-        case .settings:  return "settings".localized
+        case .home:      return R.stringLocalizable.home()
+        case .search:    return R.stringLocalizable.search()
+        case .favorites: return R.stringLocalizable.favorites()
+        case .settings:  return R.stringLocalizable.settings()
         }
     }
 

@@ -21,7 +21,7 @@ struct HomeDetailScreen: View {
                 Button {
                     viewModel.goBack()
                 } label: {
-                    Label("back".localized, systemImage: "chevron.left")
+                    Label(R.stringLocalizable.back(), systemImage: "chevron.left")
                 }
                 Spacer()
             }
@@ -31,10 +31,10 @@ struct HomeDetailScreen: View {
             Image(systemName: "doc.text.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(Color.accentColor)
-            Text(String(format: "item_number".localized, viewModel.id)).font(.title.bold())
-            Button("open_next".localized) { viewModel.openNext() }
+            Text(R.stringLocalizable.item_number(viewModel.id)).font(.title.bold())
+            Button(R.stringLocalizable.open_next()) { viewModel.openNext() }
                 .buttonStyle(.borderedProminent)
-            Button("back_to_top".localized) { viewModel.goToTop() }
+            Button(R.stringLocalizable.back_to_top()) { viewModel.goToTop() }
                 .buttonStyle(.bordered)
             Spacer()
         }
