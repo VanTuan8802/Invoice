@@ -31,7 +31,7 @@ struct SettingsIconRow: View {
             Text(title)
                 .font(.body)
                 .foregroundStyle(Color(R.color.color111118))
-                .lineLimit(1)
+                .lineLimit(2)
             Spacer(minLength: 8)
             SettingsChevron()
         }
@@ -43,7 +43,7 @@ struct SettingsIconRow: View {
 struct SettingsChevron: View {
     var body: some View {
         Image(systemName: "chevron.right")
-            .font(.system(size: 14, weight: .semibold))
+            .font(.footnote.weight(.semibold))
             .foregroundStyle(Color(.tertiaryLabel))
     }
 }
@@ -82,9 +82,10 @@ struct SettingsPremiumBanner: View {
                 Text(R.stringLocalizable.settings_upgrade_title())
                     .font(.title.bold())
                     .foregroundStyle(Color(R.color.color111118))
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.7)
-                    .frame(width: 190, alignment: .leading)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.6)
+                    .frame(maxWidth: 190, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: true)
 
                 Spacer(minLength: 8)
 
@@ -105,7 +106,7 @@ struct SettingsPremiumBanner: View {
             .padding(.horizontal, 22)
             .padding(.bottom, 18)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .frame(height: 150)
+            .frame(minHeight: 150)
             .background(alignment: .topTrailing) { decoration }
             .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
             .contentShape(RoundedRectangle(cornerRadius: 28, style: .continuous))

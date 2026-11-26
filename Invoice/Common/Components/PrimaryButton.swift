@@ -23,6 +23,8 @@ struct PrimaryButton: View {
     let action: () -> Void
 
     @Environment(\.isEnabled) private var isEnabled
+    /// 16pt label (design) that still grows with Dynamic Type.
+    @ScaledMetric(relativeTo: .callout) private var fontSize: CGFloat = 16
 
     init(_ title: String, style: Style = .primary, action: @escaping () -> Void) {
         self.title = title
@@ -33,11 +35,13 @@ struct PrimaryButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 16, weight: .semibold))
+                .font(.system(size: fontSize, weight: .semibold))
                 .foregroundStyle(foreground)
                 .opacity(isEnabled ? 1 : 0.7)
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
-                .frame(height: 48)
+                .padding(.vertical, 8)
+                .frame(minHeight: 48)
                 .background(background)
                 .contentShape(Capsule())
         }

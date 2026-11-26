@@ -127,7 +127,8 @@ struct DocumentEditTab: View {
                     Text(store.business.name.isEmpty ? R.stringLocalizable.doc_business_info() : store.business.name)
                         .foregroundStyle(placeholderColor(isFilled: !store.business.name.isEmpty,
                                                           isMissing: model.isBusinessMissing))
-                        .lineLimit(1)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
                 }
                 .buttonStyle(.plain)
                 Spacer(minLength: 8)
@@ -149,7 +150,7 @@ struct DocumentEditTab: View {
                  + Text(document.client?.name ?? R.stringLocalizable.doc_client())
                     .foregroundColor(placeholderColor(isFilled: document.client != nil, isMissing: model.isClientMissing)))
                     .font(.body)
-                    .lineLimit(1)
+                    .lineLimit(2)
                 Spacer(minLength: 8)
                 DocumentChevron()
             }

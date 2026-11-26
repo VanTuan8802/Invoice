@@ -95,11 +95,15 @@ struct DocumentListScreen: View {
                         .font(.footnote)
                         .foregroundStyle(Color(R.color.color6B6B78))
                 }
-                .lineLimit(1)
+                // Large text: the name wraps instead of the amount.
+                .lineLimit(2)
                 Spacer(minLength: 8)
                 Text(document.total.currencyText(code: store.currencyCode))
                     .font(.subheadline)
                     .foregroundStyle(Color(R.color.color111118))
+                    .lineLimit(1)
+                    .fixedSize()
+                    .layoutPriority(1)
             }
             .cardSurface()
         }

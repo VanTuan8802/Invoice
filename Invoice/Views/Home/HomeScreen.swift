@@ -73,7 +73,7 @@ struct HomeScreen: View {
             }
             .buttonStyle(.plain)
         }
-        .frame(height: 52)
+        .frame(minHeight: 52)
     }
 
     // MARK: - Promo banner
@@ -103,7 +103,7 @@ struct HomeScreen: View {
         .padding(.leading, 18)
         .padding(.trailing, 10)
         .padding(.vertical, 12)
-        .frame(height: 96)
+        .frame(minHeight: 96)
         .background(
             RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .fill(Color(R.color.colorFFFFFF))
@@ -138,7 +138,7 @@ struct HomeScreen: View {
                         .font(.title2.bold())
                         .foregroundStyle(Color(R.color.color111118))
                         .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.5)
                     Spacer(minLength: 4)
                     Image(R.image.ic_home_arrow_up_right)
                         .frame(width: 32, height: 32)
