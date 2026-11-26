@@ -48,14 +48,35 @@ enum DocumentFieldRoute: Hashable {
     @ViewBuilder
     var screen: some View {
         switch self {
-        case .info, .template, .email, .discount, .tax, .payments, .payment, .paymentInfo, .note, .recurring:
-            PlaceholderScreen(routeID: identifier)
+        case .info:                    FieldInfoScreen()
+        case .template(let isDefault): FieldTemplateScreen(isDefault: isDefault)
+        case .email:                   FieldEmailScreen()
+        case .discount:                FieldDiscountScreen()
+        case .tax:                     FieldTaxScreen()
+        case .payments:                FieldPaymentsScreen()
+        case .payment(let id):         FieldPaymentScreen(paymentID: id)
+        case .paymentInfo:             FieldPaymentInfoScreen()
+        case .note:                    FieldNoteScreen()
+        case .recurring:               FieldRecurringScreen()
         }
     }
 
     #if DEBUG
+    /// `-uiPreview <key>` → route (see `App/UIPreview.swift`).
     static var debugPreviews: [String: DocumentFieldRoute] {
-        ["field.info": .info]
+        [
+            "field.info": .info,
+            "field.template": .template(isDefault: false),
+            "field.template.default": .template(isDefault: true),
+            "field.email": .email,
+            "field.discount": .discount,
+            "field.tax": .tax,
+            "field.payments": .payments,
+            "field.payment": .payment(id: nil),
+            "field.paymentInfo": .paymentInfo,
+            "field.note": .note,
+            "field.recurring": .recurring
+        ]
     }
     #endif
 }

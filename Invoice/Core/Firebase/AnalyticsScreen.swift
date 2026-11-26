@@ -31,6 +31,18 @@ enum AnalyticsScreen: String {
 
 
     // MARK: Document fields
+    case fieldInfo = "field_info"
+    case fieldTemplate = "field_template"
+    case fieldTemplateDefault = "field_template_default"   // default template, opened from Settings
+    case fieldEmail = "field_email"
+    case fieldEmailContacts = "field_email_contacts"
+    case fieldDiscount = "field_discount"
+    case fieldTax = "field_tax"
+    case fieldPayments = "field_payments"
+    case fieldPayment = "field_payment"
+    case fieldPaymentInfo = "field_payment_info"
+    case fieldNote = "field_note"
+    case fieldRecurring = "field_recurring"
 
 
     // MARK: Client & item
