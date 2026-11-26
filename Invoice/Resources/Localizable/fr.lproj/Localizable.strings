@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "Facture";
+"home_promo_title" = "Créez vos factures en quelques secondes";
+"home_promo_message" = "Du devis à la facture : rapide, clair et où que vous soyez.";
+"home_tile_invoice" = "Facture";
+"home_tile_estimate" = "Devis";
+"home_tile_client" = "Client";
+"home_tile_item" = "Article";
+"home_reports_title" = "Rapports";
+"home_reports_subtitle" = "Chiffre d'affaires, factures impayées et en retard";
 
 
 /* ===== Onboarding & premium ===== */

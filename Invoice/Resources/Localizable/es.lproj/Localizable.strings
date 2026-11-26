@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "Factura";
+"home_promo_title" = "Crea facturas en segundos";
+"home_promo_message" = "Del presupuesto a la factura: rápido, claro y donde estés.";
+"home_tile_invoice" = "Factura";
+"home_tile_estimate" = "Presupuesto";
+"home_tile_client" = "Cliente";
+"home_tile_item" = "Artículo";
+"home_reports_title" = "Informes";
+"home_reports_subtitle" = "Ingresos, facturas pendientes y vencidas";
 
 
 /* ===== Onboarding & premium ===== */

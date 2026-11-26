@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "Invoice";
+"home_promo_title" = "Create Invoices in Seconds";
+"home_promo_message" = "From estimate to invoice - quick, clear, and on the go.";
+"home_tile_invoice" = "Invoice";
+"home_tile_estimate" = "Estimate";
+"home_tile_client" = "Client";
+"home_tile_item" = "Item";
+"home_reports_title" = "Reports";
+"home_reports_subtitle" = "Revenue, unpaid and overdue invoices";
 
 
 /* ===== Onboarding & premium ===== */

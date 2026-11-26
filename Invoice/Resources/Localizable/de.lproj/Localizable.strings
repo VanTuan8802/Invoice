@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "Rechnung";
+"home_promo_title" = "Rechnungen in Sekunden erstellen";
+"home_promo_message" = "Vom Angebot zur Rechnung – schnell, klar und unterwegs.";
+"home_tile_invoice" = "Rechnung";
+"home_tile_estimate" = "Angebot";
+"home_tile_client" = "Kunde";
+"home_tile_item" = "Artikel";
+"home_reports_title" = "Berichte";
+"home_reports_subtitle" = "Umsatz, offene und überfällige Rechnungen";
 
 
 /* ===== Onboarding & premium ===== */

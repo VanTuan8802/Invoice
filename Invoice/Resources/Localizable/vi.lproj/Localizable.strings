@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "Hóa đơn";
+"home_promo_title" = "Tạo hóa đơn trong vài giây";
+"home_promo_message" = "Từ báo giá đến hóa đơn - nhanh, rõ ràng, mọi lúc mọi nơi.";
+"home_tile_invoice" = "Hóa đơn";
+"home_tile_estimate" = "Báo giá";
+"home_tile_client" = "Khách hàng";
+"home_tile_item" = "Sản phẩm";
+"home_reports_title" = "Báo cáo";
+"home_reports_subtitle" = "Doanh thu, hóa đơn chưa thanh toán và quá hạn";
 
 
 /* ===== Onboarding & premium ===== */

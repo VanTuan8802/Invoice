@@ -54,6 +54,15 @@
 
 
 /* ===== Home ===== */
+"home_title" = "請求書";
+"home_promo_title" = "数秒で請求書を作成";
+"home_promo_message" = "見積もりから請求書まで、すばやく、わかりやすく、どこでも。";
+"home_tile_invoice" = "請求書";
+"home_tile_estimate" = "見積書";
+"home_tile_client" = "顧客";
+"home_tile_item" = "品目";
+"home_reports_title" = "レポート";
+"home_reports_subtitle" = "売上、未払い・期限超過の請求書";
 
 
 /* ===== Onboarding & premium ===== */
