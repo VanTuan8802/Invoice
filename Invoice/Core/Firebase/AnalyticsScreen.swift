@@ -46,9 +46,19 @@ enum AnalyticsScreen: String {
 
 
     // MARK: Client & item
+    case clientList = "client_list"
+    case clientPicker = "client_picker"                // client list opened from the invoice editor
+    case clientDetail = "client_detail"
+    case clientEdit = "client_edit"
+    case itemList = "item_list"
+    case itemPicker = "item_picker"                    // "My Items" opened from the invoice editor
+    case itemEdit = "item_edit"                        // catalog item ("My Items")
+    case itemLineItem = "item_line_item"               // line item on the open document
 
 
     // MARK: Reports
+    case reportsOverview = "reports_overview"
+    case reportsUnpaid = "reports_unpaid"
 
 
     // MARK: Settings

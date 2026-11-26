@@ -26,14 +26,23 @@ enum ClientRoute: Hashable {
     @ViewBuilder
     var screen: some View {
         switch self {
-        case .list, .detail, .edit:
-            PlaceholderScreen(routeID: identifier)
+        case .list(let isPicker):
+            ClientListScreen(isPicker: isPicker)
+        case .detail(let id):
+            ClientDetailScreen(clientID: id)
+        case .edit(let id):
+            ClientEditScreen(clientID: id)
         }
     }
 
     #if DEBUG
     static var debugPreviews: [String: ClientRoute] {
-        ["client.list": .list(isPicker: false)]
+        [
+            "client.list": .list(isPicker: false),
+            "client.picker": .list(isPicker: true),
+            "client.detail": .detail(id: SampleData.clients[0].id),
+            "client.edit": .edit(id: nil)
+        ]
     }
     #endif
 }

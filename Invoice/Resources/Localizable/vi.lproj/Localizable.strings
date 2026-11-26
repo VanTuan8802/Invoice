@@ -298,6 +298,67 @@
 
 
 /* ===== Client, item & reports ===== */
+"client_title" = "Khách hàng";
+"client_empty_title" = "Bạn chưa có khách hàng nào.";
+"client_empty_message" = "Nhấn nút dấu cộng bên dưới để tạo khách hàng đầu tiên.";
+"client_no_client" = "Không có khách hàng";
+"client_invoice_count_one" = "%d hóa đơn";
+"client_invoice_count_other" = "%d hóa đơn";
+"client_name" = "Tên khách hàng:";
+"client_name_placeholder" = "Tên";
+"client_email" = "Email:";
+"client_email_placeholder" = "Địa chỉ email";
+"client_mobile" = "Di động";
+"client_mobile_placeholder" = "Số di động";
+"client_phone" = "Điện thoại";
+"client_phone_placeholder" = "Số điện thoại";
+"client_fax" = "Fax";
+"client_fax_placeholder" = "Số fax";
+"client_address_line" = "Địa chỉ %d";
+"client_import_contact" = "Nhập từ danh bạ";
+"client_discard_title" = "Bạn có chắc muốn rời đi mà không lưu thay đổi?";
+"client_sort_title" = "Sắp xếp theo";
+"client_sort_name" = "Tên";
+"client_sort_amount" = "Số tiền";
+"item_title" = "Mặt hàng";
+"item_empty_title" = "Bạn chưa có mặt hàng nào";
+"item_empty_message" = "Nhấn nút dấu cộng bên dưới để tạo mặt hàng đầu tiên!";
+"item_name_placeholder" = "Tên sản phẩm";
+"item_price" = "Giá:";
+"item_quantity" = "Số lượng:";
+"item_discount" = "Giảm giá:";
+"item_discount_amount" = "Mức giảm giá:";
+"item_no_discount" = "Không giảm giá";
+"item_discount_percentage" = "Phần trăm";
+"item_discount_fixed" = "Số tiền cố định";
+"item_taxable" = "Chịu thuế:";
+"item_tax_rate" = "Thuế suất:";
+"item_others" = "Khác";
+"item_save_to_my_items" = "Lưu vào “Mặt hàng của tôi”";
+"item_invalid_title" = "Một số trường chứa dữ liệu không hợp lệ. Bạn muốn tiếp tục sửa hay bỏ các thay đổi?";
+"item_sort_title" = "Sắp xếp theo";
+"item_sort_name" = "Tên";
+"item_sort_price" = "Giá";
+"reports_title" = "Báo cáo";
+"reports_period_week" = "Tuần";
+"reports_period_month" = "Tháng";
+"reports_period_year" = "Năm";
+"reports_total_revenue" = "Tổng doanh thu";
+"reports_change_vs" = "%@ so với %@";
+"reports_last_week" = "tuần trước";
+"reports_status" = "Trạng thái";
+"reports_paid" = "Đã thanh toán";
+"reports_unpaid" = "Chưa thanh toán";
+"reports_overdue" = "Quá hạn";
+"reports_invoice_count_one" = "%d hóa đơn";
+"reports_invoice_count_other" = "%d hóa đơn";
+"reports_top_clients" = "Khách hàng hàng đầu";
+"reports_unpaid_title" = "Chưa thanh toán & quá hạn";
+"reports_summary" = "%@ · %@";
+"reports_due" = "%@ · Hạn %@";
+"reports_send_reminders" = "Gửi nhắc nhở cho tất cả";
+"reports_reminder_message" = "Xin chào %@, đây là lời nhắc rằng hóa đơn %@ trị giá %@ đến hạn vào %@. Xin cảm ơn!";
+"reports_unpaid_empty" = "Tuyệt vời! Không có hóa đơn nào chưa thanh toán.";
 
 
 /* ===== Settings ===== */

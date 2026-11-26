@@ -298,6 +298,67 @@
 
 
 /* ===== Client, item & reports ===== */
+"client_title" = "Cliente";
+"client_empty_title" = "No tienes ningún cliente.";
+"client_empty_message" = "Toca el botón más de abajo para crear tu primer cliente.";
+"client_no_client" = "Sin cliente";
+"client_invoice_count_one" = "%d factura";
+"client_invoice_count_other" = "%d facturas";
+"client_name" = "Nombre del cliente:";
+"client_name_placeholder" = "Nombre";
+"client_email" = "Correo:";
+"client_email_placeholder" = "Correo electrónico";
+"client_mobile" = "Móvil";
+"client_mobile_placeholder" = "Número de móvil";
+"client_phone" = "Teléfono";
+"client_phone_placeholder" = "Número de teléfono";
+"client_fax" = "Fax";
+"client_fax_placeholder" = "Número de fax";
+"client_address_line" = "Dirección %d";
+"client_import_contact" = "Importar de contactos";
+"client_discard_title" = "¿Seguro que quieres salir sin guardar los cambios?";
+"client_sort_title" = "Ordenar por";
+"client_sort_name" = "Nombre";
+"client_sort_amount" = "Importe";
+"item_title" = "Artículo";
+"item_empty_title" = "No tienes ningún artículo";
+"item_empty_message" = "¡Toca el botón más de abajo para crear tu primer artículo!";
+"item_name_placeholder" = "Nombre del producto";
+"item_price" = "Precio:";
+"item_quantity" = "Cantidad:";
+"item_discount" = "Descuento:";
+"item_discount_amount" = "Importe del descuento:";
+"item_no_discount" = "Sin descuento";
+"item_discount_percentage" = "Porcentaje";
+"item_discount_fixed" = "Importe fijo";
+"item_taxable" = "Sujeto a impuestos:";
+"item_tax_rate" = "Tasa de impuesto:";
+"item_others" = "Otros";
+"item_save_to_my_items" = "Guardar en “Mis artículos”";
+"item_invalid_title" = "Algunos campos contienen datos no válidos. ¿Quieres seguir editando o descartar los cambios?";
+"item_sort_title" = "Ordenar por";
+"item_sort_name" = "Nombre";
+"item_sort_price" = "Precio";
+"reports_title" = "Informes";
+"reports_period_week" = "Semana";
+"reports_period_month" = "Mes";
+"reports_period_year" = "Año";
+"reports_total_revenue" = "Ingresos totales";
+"reports_change_vs" = "%@ vs. %@";
+"reports_last_week" = "la semana pasada";
+"reports_status" = "Estado";
+"reports_paid" = "Pagado";
+"reports_unpaid" = "Pendiente";
+"reports_overdue" = "Vencido";
+"reports_invoice_count_one" = "%d factura";
+"reports_invoice_count_other" = "%d facturas";
+"reports_top_clients" = "Mejores clientes";
+"reports_unpaid_title" = "Pendientes y vencidas";
+"reports_summary" = "%@ · %@";
+"reports_due" = "%@ · Vence el %@";
+"reports_send_reminders" = "Enviar recordatorios a todos";
+"reports_reminder_message" = "Hola %@, te recordamos que la factura %@ por %@ vence el %@. ¡Gracias!";
+"reports_unpaid_empty" = "¡Todo al día! No hay facturas pendientes.";
 
 
 /* ===== Settings ===== */

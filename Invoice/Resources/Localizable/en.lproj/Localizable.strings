@@ -298,6 +298,67 @@
 
 
 /* ===== Client, item & reports ===== */
+"client_title" = "Client";
+"client_empty_title" = "You don’t have any Client.";
+"client_empty_message" = "Click on the plus button below to create your first client.";
+"client_no_client" = "No Client";
+"client_invoice_count_one" = "%d Invoice";
+"client_invoice_count_other" = "%d Invoices";
+"client_name" = "Client Name:";
+"client_name_placeholder" = "Name";
+"client_email" = "Email:";
+"client_email_placeholder" = "Email Address";
+"client_mobile" = "Mobile";
+"client_mobile_placeholder" = "Mobile Number";
+"client_phone" = "Phone";
+"client_phone_placeholder" = "Phone Number";
+"client_fax" = "Fax";
+"client_fax_placeholder" = "Fax Number";
+"client_address_line" = "Address %d";
+"client_import_contact" = "Import from contact";
+"client_discard_title" = "Are you sure you want to leave without saving your changes?";
+"client_sort_title" = "Sort by";
+"client_sort_name" = "Name";
+"client_sort_amount" = "Amount";
+"item_title" = "Item";
+"item_empty_title" = "You don’t have any Item";
+"item_empty_message" = "Click on the plus button below to create your first item!";
+"item_name_placeholder" = "Product's Name";
+"item_price" = "Price:";
+"item_quantity" = "Quantity:";
+"item_discount" = "Discount:";
+"item_discount_amount" = "Discount Amount:";
+"item_no_discount" = "Not Discount";
+"item_discount_percentage" = "Percentage";
+"item_discount_fixed" = "Fixed Amount";
+"item_taxable" = "Taxable:";
+"item_tax_rate" = "Tax Rate:";
+"item_others" = "Others";
+"item_save_to_my_items" = "Save to “My Items”";
+"item_invalid_title" = "Some fields contain invalid data. Would you like to keep editing or to discard the changes?";
+"item_sort_title" = "Sort by";
+"item_sort_name" = "Name";
+"item_sort_price" = "Price";
+"reports_title" = "Reports";
+"reports_period_week" = "Week";
+"reports_period_month" = "Month";
+"reports_period_year" = "Year";
+"reports_total_revenue" = "Total Revenue";
+"reports_change_vs" = "%@ vs %@";
+"reports_last_week" = "last week";
+"reports_status" = "Status";
+"reports_paid" = "Paid";
+"reports_unpaid" = "Unpaid";
+"reports_overdue" = "Overdue";
+"reports_invoice_count_one" = "%d invoice";
+"reports_invoice_count_other" = "%d invoices";
+"reports_top_clients" = "Top Clients";
+"reports_unpaid_title" = "Unpaid & Overdue";
+"reports_summary" = "%@ · %@";
+"reports_due" = "%@ · Due %@";
+"reports_send_reminders" = "Send Reminders to All";
+"reports_reminder_message" = "Hi %@, this is a friendly reminder that invoice %@ for %@ is due on %@. Thank you!";
+"reports_unpaid_empty" = "All caught up! There are no unpaid invoices.";
 
 
 /* ===== Settings ===== */

@@ -23,14 +23,19 @@ enum ReportsRoute: Hashable {
     @ViewBuilder
     var screen: some View {
         switch self {
-        case .overview, .unpaid:
-            PlaceholderScreen(routeID: identifier)
+        case .overview:
+            ReportsOverviewScreen()
+        case .unpaid:
+            ReportsUnpaidScreen()
         }
     }
 
     #if DEBUG
     static var debugPreviews: [String: ReportsRoute] {
-        ["reports.overview": .overview]
+        [
+            "reports.overview": .overview,
+            "reports.unpaid": .unpaid
+        ]
     }
     #endif
 }

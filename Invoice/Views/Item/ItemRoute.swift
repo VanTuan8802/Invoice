@@ -26,14 +26,24 @@ enum ItemRoute: Hashable {
     @ViewBuilder
     var screen: some View {
         switch self {
-        case .list, .lineItem, .edit:
-            PlaceholderScreen(routeID: identifier)
+        case .list(let isPicker):
+            ItemListScreen(isPicker: isPicker)
+        case .lineItem(let id):
+            LineItemScreen(lineItemID: id)
+        case .edit(let id):
+            ItemEditScreen(itemID: id)
         }
     }
 
     #if DEBUG
     static var debugPreviews: [String: ItemRoute] {
-        ["item.list": .list(isPicker: false)]
+        [
+            "item.list": .list(isPicker: false),
+            "item.picker": .list(isPicker: true),
+            "item.edit": .edit(id: nil),
+            "item.edit.existing": .edit(id: SampleData.items[0].id),
+            "item.lineItem": .lineItem(id: nil)
+        ]
     }
     #endif
 }

@@ -298,6 +298,67 @@
 
 
 /* ===== Client, item & reports ===== */
+"client_title" = "Client";
+"client_empty_title" = "Vous n’avez aucun client.";
+"client_empty_message" = "Appuyez sur le bouton plus ci-dessous pour créer votre premier client.";
+"client_no_client" = "Aucun client";
+"client_invoice_count_one" = "%d facture";
+"client_invoice_count_other" = "%d factures";
+"client_name" = "Nom du client :";
+"client_name_placeholder" = "Nom";
+"client_email" = "E-mail :";
+"client_email_placeholder" = "Adresse e-mail";
+"client_mobile" = "Mobile";
+"client_mobile_placeholder" = "Numéro de mobile";
+"client_phone" = "Téléphone";
+"client_phone_placeholder" = "Numéro de téléphone";
+"client_fax" = "Fax";
+"client_fax_placeholder" = "Numéro de fax";
+"client_address_line" = "Adresse %d";
+"client_import_contact" = "Importer depuis les contacts";
+"client_discard_title" = "Voulez-vous vraiment quitter sans enregistrer vos modifications ?";
+"client_sort_title" = "Trier par";
+"client_sort_name" = "Nom";
+"client_sort_amount" = "Montant";
+"item_title" = "Article";
+"item_empty_title" = "Vous n’avez aucun article";
+"item_empty_message" = "Appuyez sur le bouton plus ci-dessous pour créer votre premier article !";
+"item_name_placeholder" = "Nom du produit";
+"item_price" = "Prix :";
+"item_quantity" = "Quantité :";
+"item_discount" = "Remise :";
+"item_discount_amount" = "Montant de la remise :";
+"item_no_discount" = "Pas de remise";
+"item_discount_percentage" = "Pourcentage";
+"item_discount_fixed" = "Montant fixe";
+"item_taxable" = "Taxable :";
+"item_tax_rate" = "Taux de taxe :";
+"item_others" = "Autres";
+"item_save_to_my_items" = "Enregistrer dans « Mes articles »";
+"item_invalid_title" = "Certains champs contiennent des données non valides. Voulez-vous continuer la modification ou abandonner les changements ?";
+"item_sort_title" = "Trier par";
+"item_sort_name" = "Nom";
+"item_sort_price" = "Prix";
+"reports_title" = "Rapports";
+"reports_period_week" = "Semaine";
+"reports_period_month" = "Mois";
+"reports_period_year" = "Année";
+"reports_total_revenue" = "Chiffre d’affaires total";
+"reports_change_vs" = "%@ par rapport à %@";
+"reports_last_week" = "la semaine dernière";
+"reports_status" = "Statut";
+"reports_paid" = "Payée";
+"reports_unpaid" = "Impayée";
+"reports_overdue" = "En retard";
+"reports_invoice_count_one" = "%d facture";
+"reports_invoice_count_other" = "%d factures";
+"reports_top_clients" = "Meilleurs clients";
+"reports_unpaid_title" = "Impayées et en retard";
+"reports_summary" = "%@ · %@";
+"reports_due" = "%@ · Échéance %@";
+"reports_send_reminders" = "Envoyer des rappels à tous";
+"reports_reminder_message" = "Bonjour %@, petit rappel : la facture %@ d’un montant de %@ arrive à échéance le %@. Merci !";
+"reports_unpaid_empty" = "Tout est à jour ! Aucune facture impayée.";
 
 
 /* ===== Settings ===== */

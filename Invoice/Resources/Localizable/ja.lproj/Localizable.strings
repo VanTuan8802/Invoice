@@ -298,6 +298,67 @@
 
 
 /* ===== Client, item & reports ===== */
+"client_title" = "顧客";
+"client_empty_title" = "顧客がまだいません。";
+"client_empty_message" = "下のプラスボタンをタップして最初の顧客を作成しましょう。";
+"client_no_client" = "顧客なし";
+"client_invoice_count_one" = "請求書 %d 件";
+"client_invoice_count_other" = "請求書 %d 件";
+"client_name" = "顧客名:";
+"client_name_placeholder" = "名前";
+"client_email" = "メール:";
+"client_email_placeholder" = "メールアドレス";
+"client_mobile" = "携帯";
+"client_mobile_placeholder" = "携帯番号";
+"client_phone" = "電話";
+"client_phone_placeholder" = "電話番号";
+"client_fax" = "FAX";
+"client_fax_placeholder" = "FAX番号";
+"client_address_line" = "住所 %d";
+"client_import_contact" = "連絡先から読み込む";
+"client_discard_title" = "変更を保存せずに移動してもよろしいですか？";
+"client_sort_title" = "並べ替え";
+"client_sort_name" = "名前";
+"client_sort_amount" = "金額";
+"item_title" = "品目";
+"item_empty_title" = "品目がまだありません";
+"item_empty_message" = "下のプラスボタンをタップして最初の品目を作成しましょう！";
+"item_name_placeholder" = "商品名";
+"item_price" = "価格:";
+"item_quantity" = "数量:";
+"item_discount" = "割引:";
+"item_discount_amount" = "割引額:";
+"item_no_discount" = "割引なし";
+"item_discount_percentage" = "パーセント";
+"item_discount_fixed" = "固定額";
+"item_taxable" = "課税対象:";
+"item_tax_rate" = "税率:";
+"item_others" = "その他";
+"item_save_to_my_items" = "「マイ品目」に保存";
+"item_invalid_title" = "一部の項目に無効なデータがあります。編集を続けますか？それとも変更を破棄しますか？";
+"item_sort_title" = "並べ替え";
+"item_sort_name" = "名前";
+"item_sort_price" = "価格";
+"reports_title" = "レポート";
+"reports_period_week" = "週";
+"reports_period_month" = "月";
+"reports_period_year" = "年";
+"reports_total_revenue" = "総売上";
+"reports_change_vs" = "%@（%@比）";
+"reports_last_week" = "先週";
+"reports_status" = "ステータス";
+"reports_paid" = "支払済み";
+"reports_unpaid" = "未払い";
+"reports_overdue" = "期限超過";
+"reports_invoice_count_one" = "請求書 %d 件";
+"reports_invoice_count_other" = "請求書 %d 件";
+"reports_top_clients" = "上位の顧客";
+"reports_unpaid_title" = "未払い・期限超過";
+"reports_summary" = "%@ · %@";
+"reports_due" = "%@ · 期限 %@";
+"reports_send_reminders" = "全員にリマインダーを送信";
+"reports_reminder_message" = "%@様、請求書 %@（%@）のお支払い期限は %@ です。よろしくお願いいたします。";
+"reports_unpaid_empty" = "未払いの請求書はありません。";
 
 
 /* ===== Settings ===== */
