@@ -8,10 +8,13 @@
   `app.navi.push(..., type: .sheet())`, `app.navi.pop()`.
 - Mỗi chức năng có route enum riêng `Views/<Feature>/<Feature>Route.swift` (case + `identifier` +
   `screen` + `debugPreviews`). `Destination` chỉ chuyển tiếp, không thêm switch riêng cho màn.
-- Thư mục chức năng `Views/<Feature>/`: file Route ở gốc, còn lại chia `Screens/` (màn và sheet được
-  route mở), `Components/` (view con, tab, dialog dùng trong chức năng), `ViewModels/`, `Models/`
-  (kiểu dữ liệu, tuỳ chọn, lưu trữ riêng của chức năng). Chức năng chỉ 1–2 file (Home, Intro,
-  Language, Splash) để phẳng. Project dùng thư mục đồng bộ nên chuyển file không cần sửa pbxproj.
+- Thư mục theo màn: `Views/<Feature>/<Màn>/` (vd `Client/ClientList/`, `Document/DocumentEditor/`,
+  `Settings/Unit/`) chứa view, view model, sheet/tab/dialog và model chỉ màn đó dùng. Các màn cùng
+  chức năng nằm chung `Views/<Feature>/`, file Route ở gốc chức năng. Phần dùng chung giữa các màn
+  của một chức năng để ở `Views/<Feature>/Common/`; dùng chung giữa nhiều chức năng thì đưa lên
+  `Common/Components`. Tên thư mục màn = tên màn bỏ hậu tố `Screen`/`View` (màn chính Cài đặt là
+  `SettingsMain`). Chức năng chỉ có một màn (Home, Intro, Language, Splash) để file ngay trong
+  thư mục chức năng. Project dùng thư mục đồng bộ nên chuyển file không cần sửa pbxproj.
 - Router ẩn navigation bar hệ thống: mỗi màn tự vẽ `BasicHeaderView` (nút tròn glass + tiêu đề giữa,
   trailing `HeaderIconButton` / `HeaderTextButton`) hoặc `LargeTitleHeader`.
 - Component chung (`Common/Components`, `Common/DesignSystem`): `PrimaryButton(.primary/.outline)`,
