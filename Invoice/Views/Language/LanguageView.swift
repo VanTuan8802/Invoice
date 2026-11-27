@@ -97,7 +97,6 @@ struct LanguageView: View {
             confirm()
         }
         .disabled(!canConfirm)
-        .opacity(canConfirm ? 1 : 0.5)
         .overlay(alignment: .center) {
             if showButtonGuide {
                 tapGuide.offset(x: 4, y: 26)

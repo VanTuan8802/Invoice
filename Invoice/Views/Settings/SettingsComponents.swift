@@ -166,6 +166,7 @@ extension View {
     func settingsSectionHeader() -> some View {
         textCase(nil)
             .padding(.leading, -16)
+            .padding(.bottom, 7)
     }
 }
 

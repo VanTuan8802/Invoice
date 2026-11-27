@@ -71,9 +71,6 @@ struct DocumentEditorScreen: View {
         VStack(spacing: 0) {
             BasicHeaderView(kind.title, showBack: true, backAction: close, trailingView: {
                 HeaderIconButton(systemImage: "ellipsis") { showActions = true }
-                    .confirmationDialog(kind.title, isPresented: $showActions, titleVisibility: .hidden) {
-                        actionButtons
-                    }
             })
 
             Picker(R.stringLocalizable.doc_tab_preview(), selection: $tab) {
@@ -115,6 +112,7 @@ struct DocumentEditorScreen: View {
                 .transition(.opacity)
             }
         }
+        .optionsSheet(isPresented: $showActions) { actionButtons }
         .markAsPaidDialog(isPresented: $showMarkPaid) { method in
             model.markPaid(with: method)
         }
@@ -157,7 +155,6 @@ struct DocumentEditorScreen: View {
                 Button(R.stringLocalizable.doc_mark_paid()) { presentMarkPaid() }
             }
         }
-        Button(R.stringLocalizable.common_cancel(), role: .cancel) {}
     }
 
     // MARK: - Tabs

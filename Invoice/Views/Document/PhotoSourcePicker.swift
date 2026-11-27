@@ -31,12 +31,11 @@ private struct PhotoSourcePickerModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .confirmationDialog(R.stringLocalizable.doc_add_photo(), isPresented: $isPresented, titleVisibility: .hidden) {
+            .optionsSheet(isPresented: $isPresented) {
                 Button(R.stringLocalizable.doc_take_photo()) {
                     if canUseCamera { showCamera = true } else { showLibrary = true }
                 }
                 Button(R.stringLocalizable.doc_select_photos()) { showLibrary = true }
-                Button(R.stringLocalizable.common_cancel(), role: .cancel) {}
             }
             .photosPicker(isPresented: $showLibrary, selection: $libraryItem, matching: .images)
             .onChange(of: libraryItem) { item in

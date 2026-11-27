@@ -35,20 +35,20 @@ struct LabeledInputField<Trailing: View>: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            (Text(label).foregroundColor(Color(R.color.color8E8E93))
+            (Text(label).foregroundColor(Color(R.color.color6B6B78))
              + Text(isRequired ? "*" : "").foregroundColor(Color(R.color.colorFA0000)))
                 .font(.subheadline)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
 
             HStack(spacing: 8) {
-                TextField("", text: $text, prompt: Text(placeholder).foregroundColor(Color(R.color.colorC7C7CC)))
+                TextField("", text: $text, prompt: Text(placeholder).foregroundColor(Color(R.color.colorA5A5B0)))
                     .font(.subheadline)
                     .foregroundStyle(Color(R.color.color151515))
                     .keyboardType(keyboard)
                 trailing()
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 20)
             .frame(height: 48)
             .background(RoundedRectangle(cornerRadius: 24).fill(Color(R.color.colorFFFFFF)))
         }

@@ -62,14 +62,12 @@ struct ItemEditScreen: View {
             .clientItemSectionSpacing()
         }
         .groupedScreenBackground()
-        .alert(R.stringLocalizable.item_invalid_title(), isPresented: $viewModel.isShowingInvalidAlert) {
-            Button(R.stringLocalizable.common_discard(), role: .destructive) {
-                app.navi.pop()
-            }
-            // Cancel role keeps the alert to two side-by-side buttons; it is
-            // also the preferred (prominent) action.
-            Button(R.stringLocalizable.common_edit(), role: .cancel) {}
-                .keyboardShortcut(.defaultAction)
+        .discardAlert(
+            R.stringLocalizable.item_invalid_title(),
+            isPresented: $viewModel.isShowingInvalidAlert,
+            keepTitle: R.stringLocalizable.common_edit()
+        ) {
+            app.navi.pop()
         }
         .trackScreen(.itemEdit)
     }

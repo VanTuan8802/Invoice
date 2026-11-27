@@ -45,7 +45,7 @@ struct PrimaryButton: View {
                 .background(background)
                 .contentShape(Capsule())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(PressFadeButtonStyle())
     }
 
     private var foreground: Color {

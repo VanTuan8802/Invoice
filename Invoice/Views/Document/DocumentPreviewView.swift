@@ -233,7 +233,7 @@ struct DocumentPreviewView: View {
                     VStack(alignment: .trailing, spacing: 0) {
                         Text(money(-document.paidTotal))
                         if let date = document.payments.map(\.date).max() {
-                            Text(date.formatted(date: .long, time: .omitted)).foregroundStyle(muted)
+                            Text(date.formatted(Date.FormatStyle(date: .long, time: .omitted).locale(.app))).foregroundStyle(muted)
                         }
                     }
                     .font(.system(size: 9, weight: .medium))

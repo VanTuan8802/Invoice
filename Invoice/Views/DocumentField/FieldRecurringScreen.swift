@@ -152,6 +152,7 @@ struct FieldRecurringScreen: View {
     /// `01 Dec 2026`
     private static func dayMonthYear(_ date: Date) -> String {
         let formatter = DateFormatter()
+        formatter.locale = .app
         formatter.dateFormat = "dd MMM yyyy"
         return formatter.string(from: date)
     }

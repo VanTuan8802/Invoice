@@ -34,21 +34,19 @@ struct ClientFormScreen: View {
             ClientFormView(viewModel: viewModel)
         }
         .groupedScreenBackground()
-        .alert(R.stringLocalizable.client_discard_title(), isPresented: $viewModel.isShowingDiscardAlert) {
-            Button(R.stringLocalizable.common_discard(), role: .destructive) {
-                app.navi.pop()
-            }
-            // Cancel role keeps the alert to two side-by-side buttons; it is
-            // also the preferred (prominent) action.
-            Button(R.stringLocalizable.common_keep_editing(), role: .cancel) {}
-                .keyboardShortcut(.defaultAction)
+        .discardAlert(
+            R.stringLocalizable.client_discard_title(),
+            isPresented: $viewModel.isShowingDiscardAlert,
+            keepTitle: R.stringLocalizable.common_keep_editing()
+        ) {
+            app.navi.pop()
         }
         .trackScreen(screen)
     }
 
     private func leave() {
         if viewModel.hasChanges {
-            viewModel.isShowingDiscardAlert = true
+            afterDismissingKeyboard { viewModel.isShowingDiscardAlert = true }
         } else {
             app.navi.pop()
         }

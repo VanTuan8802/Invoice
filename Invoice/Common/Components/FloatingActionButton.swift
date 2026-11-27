@@ -25,7 +25,8 @@ struct FloatingActionButton: View {
 }
 
 extension View {
-    /// Pins a `FloatingActionButton` 16pt from the bottom-trailing safe edges.
+    /// Pins a `FloatingActionButton` 16pt from the trailing edge and 66pt above the
+    /// bottom safe area (100pt from the screen edge, as in the design).
     func floatingActionButton(
         icon: RswiftResources.ImageResource = R.image.ic_common_plus,
         action: @escaping () -> Void
@@ -33,7 +34,7 @@ extension View {
         overlay(alignment: .bottomTrailing) {
             FloatingActionButton(icon: icon, action: action)
                 .padding(.trailing, 16)
-                .padding(.bottom, 16)
+                .padding(.bottom, 66)
         }
     }
 }

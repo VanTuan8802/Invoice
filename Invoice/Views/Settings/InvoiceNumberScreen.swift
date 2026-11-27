@@ -31,7 +31,6 @@ struct InvoiceNumberScreen: View {
                             backAction: { app.navi.pop() }) {
                 HeaderTextButton(title: R.stringLocalizable.save(), action: save)
                     .disabled(!canSave)
-                    .opacity(canSave ? 1 : 0.5)
             }
 
             Form {

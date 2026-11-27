@@ -38,7 +38,7 @@ struct ClientItemEmptyState: View {
                     .foregroundStyle(Color(R.color.color111118))
                 Text(message)
                     .font(.body)
-                    .foregroundStyle(Color(R.color.color9A9AA6))
+                    .foregroundStyle(Color(R.color.color6B6B78))
                     .frame(maxWidth: 270)
             }
             .multilineTextAlignment(.center)
@@ -129,14 +129,15 @@ struct ClientItemNotesRow: View {
 // MARK: - Layout helpers
 
 extension View {
-    /// Grouped list/form spacing from the design: 8pt under the toolbar and 16pt
-    /// between cards (iOS 17+; older systems keep the default metrics).
+    /// Grouped list/form spacing from the design: the first card sits right under
+    /// the header's own 16pt gap (same 4pt top margin as the field screens) and
+    /// 16pt between cards (iOS 17+; older systems keep the default metrics).
     @ViewBuilder
     func clientItemSectionSpacing() -> some View {
         if #available(iOS 17.0, *) {
             self
                 .listSectionSpacing(16)
-                .contentMargins(.top, 8, for: .scrollContent)
+                .contentMargins(.top, 4, for: .scrollContent)
         } else {
             self
         }

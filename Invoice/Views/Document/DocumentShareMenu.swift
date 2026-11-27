@@ -37,7 +37,7 @@ struct DocumentShareMenu: View {
             }
             // Centre the close button on the send FAB it replaces (52pt, 16pt insets).
             .padding(.trailing, 14)
-            .padding(.bottom, 14)
+            .padding(.bottom, 64)
         }
         .trackScreen(.documentShare)
     }

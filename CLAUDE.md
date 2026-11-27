@@ -13,6 +13,10 @@
 - Component chung (`Common/Components`, `Common/DesignSystem`): `PrimaryButton(.primary/.outline)`,
   `FloatingActionButton` / `.floatingActionButton {}`, `SearchEntryField`, `LabeledInputField`,
   `EmptyStateView`, `.cardSurface()`, `.groupedScreenBackground()`, `.glassCircle()`, `.glassCapsule()`.
+- Danh sách tuỳ chọn (Options sheet của design) dùng `.optionsSheet(isPresented:) { Button… }`, không dùng
+  `confirmationDialog` (iOS 26 hiện thành popover nhỏ); sheet tự thêm Cancel.
+- Hộp thoại "rời đi khi chưa lưu" (Discard trái, nút giữ lại xanh bên phải) dùng
+  `.discardAlert(_:isPresented:keepTitle:) { … }`, không dùng `.alert` (iOS 26 chèn thêm Cancel).
 - Form kiểu iOS (nhãn trái, giá trị phải, nhóm bo góc) dùng `Form`/`List` `.insetGrouped`, không tự dựng.
 - Dữ liệu (`Domain/`): model `Document` (invoice/estimate), `Client`, `CatalogItem`, `BusinessProfile`;
   `DataStore` (`Container.dataStore`) giữ dữ liệu mẫu trong bộ nhớ; `DocumentEditor`

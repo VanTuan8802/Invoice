@@ -18,7 +18,7 @@ struct SearchEntryField: View {
         HStack(spacing: 8) {
             Image(R.image.ic_common_search)
             if let text {
-                TextField(placeholder, text: text)
+                TextField("", text: text, prompt: Text(placeholder).foregroundColor(.secondary))
                     .font(.body)
                     .foregroundStyle(Color(R.color.color111118))
                     .submitLabel(.search)

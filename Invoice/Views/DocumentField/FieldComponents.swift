@@ -124,6 +124,7 @@ struct FieldAmountRow: View {
 
     static func parse(_ text: String) -> Decimal? {
         let formatter = NumberFormatter()
+        formatter.locale = .app
         formatter.numberStyle = .decimal
         formatter.generatesDecimalNumbers = true
         let trimmed = text.trimmingCharacters(in: .whitespaces)
@@ -136,6 +137,7 @@ struct FieldAmountRow: View {
 
     static func currencySymbol(code: String) -> String {
         let formatter = NumberFormatter()
+        formatter.locale = .app
         formatter.numberStyle = .currency
         formatter.currencyCode = code
         return formatter.currencySymbol ?? code
@@ -284,22 +286,14 @@ struct FieldCornerShape: Shape {
 // MARK: - Options sheet
 
 extension View {
-    /// The design's "Options" action sheets: a system confirmation dialog anchored
-    /// to the bottom edge of the screen (iOS 26 presents dialogs from their anchor).
+    /// The design's "Options" action sheets (shared `optionsSheet`). `title` is
+    /// kept for call-site readability; the design shows no title.
     func fieldOptionsDialog<Actions: View>(
         _ title: String,
         isPresented: Binding<Bool>,
         @ViewBuilder actions: @escaping () -> Actions
     ) -> some View {
-        overlay(alignment: .bottom) {
-            Color.clear
-                .frame(width: 1, height: 1)
-                .allowsHitTesting(false)
-                .confirmationDialog(title, isPresented: isPresented, titleVisibility: .hidden) {
-                    actions()
-                    Button(R.stringLocalizable.common_cancel(), role: .cancel) {}
-                }
-        }
+        optionsSheet(isPresented: isPresented, actions: actions)
     }
 }
 

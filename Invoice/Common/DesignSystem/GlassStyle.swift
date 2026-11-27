@@ -38,3 +38,13 @@ extension View {
         shadow(color: Color(R.color.color111118).opacity(0.16), radius: 9, x: 0, y: 8)
     }
 }
+
+/// Press feedback without the system's automatic disabled dimming, for buttons
+/// that draw their own disabled look (otherwise the two fades stack up and the
+/// label becomes unreadable).
+struct PressFadeButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .opacity(configuration.isPressed ? 0.8 : 1)
+    }
+}

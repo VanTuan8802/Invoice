@@ -56,6 +56,7 @@ struct SettingsScreen: View {
                     }
                     .buttonStyle(.plain)
                     .listRowInsets(Self.rowInsets)
+                    .listRowSeparator(.hidden)
                     row(R.image.ic_settings_rate, R.color.colorFFF2CC, R.stringLocalizable.settings_rate_us()) {
                         viewModel.rateApp()
                     }
@@ -101,6 +102,7 @@ struct SettingsScreen: View {
         }
         .buttonStyle(.plain)
         .listRowInsets(Self.rowInsets)
+                    .listRowSeparator(.hidden)
     }
 
     /// Data group: translucent tint tiles (16% of the glyph colour), 9pt corners.
@@ -113,6 +115,7 @@ struct SettingsScreen: View {
         }
         .buttonStyle(.plain)
         .listRowInsets(Self.rowInsets)
+                    .listRowSeparator(.hidden)
     }
 }
 

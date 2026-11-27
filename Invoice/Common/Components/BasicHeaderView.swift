@@ -130,20 +130,23 @@ struct HeaderTextButton: View {
         Button(action: action) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(Color(R.color.colorFFFFFF))
+                .foregroundStyle(isEnabled ? Color(R.color.colorFFFFFF) : Color(R.color.color8E8E9A))
                 .padding(.horizontal, 14)
                 .frame(minWidth: 64)
                 .frame(height: 34)
                 .background(pill)
                 .contentShape(Capsule())
-                .opacity(isEnabled ? 1 : 0.45)
         }
-        .buttonStyle(.plain)
+        // Own disabled look (grey pill, like `PrimaryButton`) instead of the
+        // system fade stacked on a faded pill.
+        .buttonStyle(PressFadeButtonStyle())
     }
 
     @ViewBuilder
     private var pill: some View {
-        if #available(iOS 26.0, *) {
+        if !isEnabled {
+            Capsule().fill(Color(R.color.colorDFDFDF))
+        } else if #available(iOS 26.0, *) {
             Capsule()
                 .fill(Color.accentColor)
                 .glassEffect(.regular.tint(Color.accentColor).interactive(), in: .capsule)

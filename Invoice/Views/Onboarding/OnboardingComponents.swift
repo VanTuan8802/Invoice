@@ -27,13 +27,14 @@ struct OnboardingStepScaffold<Content: View>: View {
             // `BasicHeaderView`'s symmetric 88pt insets allow
             // ("Upload your business logo").
             BasicHeaderView("", showBack: true, backAction: onBack)
-                .overlay {
+                .overlay(alignment: .top) {
                     Text(title)
                         .font(.headline)
                         .foregroundStyle(Color(R.color.color111118))
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                         .padding(.horizontal, 68)
+                        .frame(height: 44)
                 }
                 .padding(.top, 2)
 

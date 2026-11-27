@@ -78,12 +78,12 @@ struct LineItemScreen: View {
             .clientItemSectionSpacing()
         }
         .groupedScreenBackground()
-        .alert(R.stringLocalizable.item_invalid_title(), isPresented: $viewModel.isShowingInvalidAlert) {
-            Button(R.stringLocalizable.common_discard(), role: .destructive) {
-                app.navi.pop()
-            }
-            Button(R.stringLocalizable.common_edit(), role: .cancel) {}
-                .keyboardShortcut(.defaultAction)
+        .discardAlert(
+            R.stringLocalizable.item_invalid_title(),
+            isPresented: $viewModel.isShowingInvalidAlert,
+            keepTitle: R.stringLocalizable.common_edit()
+        ) {
+            app.navi.pop()
         }
         .trackScreen(.itemLineItem)
     }

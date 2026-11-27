@@ -167,7 +167,7 @@ struct DocumentEmptyStateView: View {
                     .foregroundStyle(Color(R.color.color111118))
                 Text(message)
                     .font(.body)
-                    .foregroundStyle(Color(R.color.color9A9AA6))
+                    .foregroundStyle(Color(R.color.color6B6B78))
                     .frame(maxWidth: 290)
             }
             .multilineTextAlignment(.center)
